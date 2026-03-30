@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- =========================================================================
+         BAGIAN SEO (SEARCH ENGINE OPTIMIZATION)
+         Agar website mudah ditemukan di halaman 1 Google
+         ========================================================================= -->
+    <title>Sahabat Perjalanan Anda</title>
+    <meta name="description" content="Permata Lombok Transport adalah sahabat traveling Anda di Lombok. Kami melayani sewa mobil premium, antar jemput bandara, paket tour, dan island hopping dengan harga terbaik.">
+    <meta name="keywords" content="permata lombok transport, sahabat traveling lombok, sahabat traveling anda, sewa mobil lombok, rent car lombok, tour lombok, travel lombok premium, antar jemput bandara lombok, wisata lombok">
+    <meta name="author" content="Permata Lombok Transport">
+    <meta name="robots" content="index, follow"> <!-- Menyuruh Google untuk mengindeks halaman ini -->
+    <link rel="canonical" href="https://permatalomboktransport.github.io/">
+
+    <!-- Open Graph (Untuk tampilan bagus saat link di-share di WhatsApp/Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://permatalomboktransport.github.io/">
+    <meta property="og:title" content="Sahabat Traveling Anda">
+    <meta property="og:description" content="Layanan sewa mobil premium, tour, dan antar jemput di Lombok dengan harga terbaik dan supir ramah.">
+    <meta property="og:image" content="https://permatalomboktransport.github.io/assets/images/hero.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Permata Lombok Transport - Premium Travel">
+    <meta name="twitter:description" content="Layanan sewa mobil premium, tour, dan antar jemput di Lombok dengan harga terbaik.">
+    <meta name="twitter:image" content="https://permatalomboktransport.github.io/assets/images/hero.png">
+
+    <!-- Schema.org JSON-LD (Kode Rahasia untuk Google Maps & Bisnis Lokal) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Permata Lombok Transport",
+      "alternateName": "Sahabat Traveling Lombok Anda",
+      "image": "https://permatalomboktransport.github.io/assets/images/favicon.png",
+      "description": "Permata Lombok Transport menyediakan layanan sewa mobil premium, paket tour, island hopping, dan antar jemput bandara di pulau Lombok, Nusa Tenggara Barat.",
+      "url": "https://permatalomboktransport.github.io/",
+      "telephone": "+6287859245125",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lombok",
+        "addressRegion": "Nusa Tenggara Barat",
+        "addressCountry": "ID"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- =========================================================================
+         BAGIAN 1: SUMBER DAYA EKSTERNAL
+         Salam hangat! Di sini kita memuat perpustakaan (library) dari luar 
+         untuk memperindah tampilan tanpa harus menulis kode dari nol.
+         ========================================================================= -->
+         
+    <!-- Tailwind CSS: Kerangka kerja untuk mendesain antarmuka secara cepat -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons: Kumpulan ikon modern yang elegan untuk mempercantik antarmuka -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- =========================================================================
+         BAGIAN 2: KONFIGURASI TAILWIND CSS
+         Di bagian ini, kita menyesuaikan warna, jenis huruf (font), dan 
+         animasi khusus yang menjadi identitas merek Permata Lombok Transport.
+         ========================================================================= -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Mengizinkan pergantian mode gelap/terang secara manual
+            theme: {
+                extend: {
+                    // Mendaftarkan jenis huruf dari Google Fonts
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'], // Digunakan untuk teks bacaan
+                        display: ['Poppins', 'sans-serif'], // Digunakan untuk teks judul besar
+                    },
+                    // Palet warna khusus sesuai identitas merek
+                    colors: {
+                        'theme-light': '#ffffff',        // Latar belakang mode terang
+                        'theme-dark': '#0a1128',         // Latar belakang mode gelap (biru malam)
+                        'theme-text-dark': '#000000',    // Warna teks utama pada mode terang
+                        'theme-blue-light': '#2563EB',   // Biru cerah untuk aksen utama
+                        'theme-blue-dark': '#1D4ED8',    // Biru pekat untuk efek saat disorot (hover)
+                        'theme-yellow-light': '#FACC15', // Kuning cerah untuk aksen sekunder
+                        'theme-yellow-dark': '#EAB308',  // Kuning emas untuk efek saat disorot
+                        'whatsapp': '#25D366',           // Hijau khas aplikasi WhatsApp
+                        'whatsapp-hover': '#128C7E',     // Hijau pekat WhatsApp saat disorot
+                    },
+                    // Konfigurasi durasi dan jenis animasi
+                    animation: {
+                        'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
+                        'wave-slow': 'waveAnim 15s linear infinite',
+                        'wave-med': 'waveAnim 10s linear infinite',
+                        'wave-fast': 'waveAnim 7s linear infinite',
+                        'bounce-subtle': 'bounceSubtle 4s ease-in-out infinite',
+                        'float-icon': 'floatIcon 3s ease-in-out infinite',
+                        'marquee-left': 'marqueeLeft 30s linear infinite',
+                    },
+                    // Detail pergerakan bingkai (keyframes) untuk setiap animasi
+                    keyframes: {
+                        heartbeat: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '14%': { transform: 'scale(1.15)' },
+                            '28%': { transform: 'scale(1)' },
+                            '42%': { transform: 'scale(1.15)' },
+                            '70%': { transform: 'scale(1)' },
+                        },
+                        waveAnim: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        floatIcon: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        marqueeLeft: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- =========================================================================
+         BAGIAN 3: GAYA CSS KUSTOM (MANUAL)
+         Beberapa gaya yang kompleks, seperti transisi gulir (scroll reveal) 
+         dan bilah gulir (scrollbar), ditulis secara manual di sini.
+         ========================================================================= -->
+    <style>
+        /* Mengimpor jenis huruf (font) secara langsung dari Google */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@800&display=swap');
+
+        /* Aturan dasar pemulusan huruf */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 600;
+        }
+
+        /* Menerapkan font khusus untuk seluruh elemen judul */
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+        }
+
+        /* Logika transisi layar pemuatan (preloader) */
+        #preloader {
+            z-index: 9999;
+            transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        #preloader-content {
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        /* Logika efek kemunculan teks pada beranda (Hero Section) */
+        #hero-text-content {
+            opacity: 0;
+            transform: translateX(-120px);
+            transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #hero-text-content.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* --- Kelas-kelas Animasi Muncul Saat Digulir (Scroll Reveal) --- */
+        .reveal-up {
+            opacity: 0; transform: translateY(50px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.is-visible { opacity: 1; transform: translateY(0); }
+
+        .reveal-down {
+            opacity: 0; transform: translateY(-50px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-down.is-visible { opacity: 1; transform: translateY(0); }
+
+        .reveal-left {
+            opacity: 0; transform: translateX(-50px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.is-visible { opacity: 1; transform: translateX(0); }
+
+        .reveal-right {
+            opacity: 0; transform: translateX(50px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.is-visible { opacity: 1; transform: translateX(0); }
+
+        .reveal-zoom {
+            opacity: 0; transform: scale(0.85);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-zoom.is-visible { opacity: 1; transform: scale(1); }
+
+        .reveal-blur {
+            opacity: 0; filter: blur(10px); transform: translateY(30px);
+            transition: all 1.2s. cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-blur.is-visible { opacity: 1; filter: blur(0); transform: translateY(0); }
+
+        .reveal-flip {
+            opacity: 0; transform: perspective(400px) rotateX(15deg);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-flip.is-visible { opacity: 1; transform: perspective(400px) rotateX(0deg); }
+
+        /* --- Kustomisasi Bilah Gulir (Scrollbar) --- */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
+        .dark ::-webkit-scrollbar-track { background: #0a1128; }
+        ::-webkit-scrollbar-thumb { background: #2563EB; }
+        .dark ::-webkit-scrollbar-thumb { background: #1D4ED8; }
+        ::-webkit-scrollbar-thumb:hover { background: #FACC15; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: #EAB308; }
+    </style>
+</head>
+
+<body class="bg-theme-light text-theme-text-dark dark:bg-theme-dark dark:text-theme-light transition-colors duration-300 overflow-x-hidden" id="body">
+
+    <!-- =========================================================================
+         LAYAR PEMUATAN (PRELOADER)
+         Menutupi layar saat pertama kali dibuka, kemudian menghilang secara halus.
+         ========================================================================= -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-theme-light dark:bg-theme-dark flex flex-col items-center justify-center">
+        <div id="preloader-content" class="relative flex items-center justify-center">
+            <div class="absolute inset-0 bg-theme-blue-light/20 dark:bg-theme-blue-dark/30 blur-2xl rounded-full scale-[1.5]"></div>
+            <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
+                 alt="Logo Permata Lombok Transport - Sahabat Traveling Anda" 
+                 class="w-24 md:w-32 h-auto relative z-10 animate-heartbeat drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_15px_15px_rgba(37,99,235,0.2)]"
+                 onerror="this.src='https://via.placeholder.com/150?text=PL';">
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         BAGIAN NAVIGASI ATAS (HEADER)
+         Berisi logo perusahaan dan tombol fungsional (tema & menu seluler).
+         ========================================================================= -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 top-0 px-0">
+        <div id="header-inner" class="mx-auto px-6 py-6 transition-all duration-300 bg-transparent flex justify-between items-center">
+            
+            <!-- Logo Perusahaan -->
+            <div class="relative z-50 block reveal-zoom cursor-default">
+                <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
+                     alt="Logo Permata Lombok Transport" 
+                     class="h-10 md:h-12 w-auto drop-shadow-md hover:scale-105 transition-transform"
+                     onerror="this.style.display='none';">
+            </div>
+
+            <!-- Area Tombol Aksi Kanan -->
+            <div class="flex items-center gap-4 md:gap-6 relative z-50 reveal-left">
+                <!-- Tombol Mode Gelap/Terang -->
+                <button id="theme-toggle" class="p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors">
+                    <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 md:w-7 md:h-7 hidden"></i>
+                    <i data-lucide="moon" id="theme-toggle-dark-icon" class="w-6 h-6 md:w-7 md:h-7 hidden"></i>
+                </button>
+
+                <!-- Tombol Menu Seluler (Bentuk Garis) -->
+                <button id="mobile-menu-btn" class="p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors">
+                    <svg id="icon-menu" class="w-8 h-8 md:w-9 md:h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <line x1="4" y1="9" x2="20" y2="9"></line>
+                        <line x1="10" y1="15" x2="20" y2="15"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Hamparan Menu Seluler Layar Penuh -->
+        <div id="mobile-dropdown" class="fixed inset-0 z-[60] bg-theme-light dark:bg-theme-dark transition-all duration-500 opacity-0 pointer-events-none flex flex-col items-center justify-center">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 md:top-8 md:right-12 p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors flex items-center justify-center">
+                <i data-lucide="x" class="w-10 h-10 md:w-12 md:h-12 hover:rotate-90 transition-transform duration-300"></i>
+            </button>
+
+            <!-- Tautan Navigasi -->
+            <nav class="flex flex-col space-y-8 text-center" id="mobile-menu-content">
+                <a href="/" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Beranda</a>
+                <a href="tentang.html" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Tentang</a>
+                <a href="layanan.html" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Layanan</a>
+                <a href="destinasi.html" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Destinasi</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         BAGIAN UTAMA ATAS (HERO SECTION)
+         Layar penuh pertama yang dilihat pengunjung, menyajikan judul dan animasi ombak.
+         ========================================================================= -->
+    <section id="hero" class="relative h-screen w-full flex items-center overflow-hidden">
+        
+        <!-- Gambar Latar Belakang (Skala lambat membesar) -->
+        <div class="absolute inset-0 z-0">
+            <div id="hero-bg-img" class="absolute inset-0 bg-cover bg-center transition-transform duration-[3s] ease-out scale-105" style="background-image: url('https://permatalomboktransport.github.io/assets/images/hero.png');"></div>
+        </div>
+        
+        <!-- Lapisan Gelap/Terang Semi-Transparan -->
+        <div class="absolute inset-0 z-10 bg-theme-light/50 dark:bg-theme-dark/50 transition-colors duration-300"></div>
+
+        <!-- Konten Teks Judul -->
+        <div class="container mx-auto px-6 md:px-12 relative z-20 h-full flex items-center">
+            <div id="hero-text-content" class="flex items-stretch gap-4 sm:gap-5 md:gap-8 w-full">
+                <!-- Garis Aksen Vertikal Kiri -->
+                <div class="w-2.5 sm:w-3 md:w-4 bg-theme-text-dark dark:bg-theme-light rounded-full shadow-lg shrink-0"></div>
+                
+                <!-- Susunan Teks Responsif -->
+                <div class="flex flex-col justify-center">
+                    <h1 class="text-[11vw] sm:text-6xl md:text-7xl lg:text-[6rem] flex flex-col leading-[1.05] tracking-tight">
+                        <span class="text-theme-yellow-light dark:text-theme-yellow-dark drop-shadow-md whitespace-nowrap">PERMATA</span>
+                        <span class="text-theme-blue-light dark:text-theme-blue-dark drop-shadow-md whitespace-nowrap">LOMBOK</span>
+                        <span class="text-theme-text-dark dark:text-theme-light drop-shadow-md whitespace-nowrap">TRANSPORT</span>
+                    </h1>
+                    <p class="mt-3 sm:mt-4 md:mt-6 text-[4.5vw] sm:text-xl md:text-2xl lg:text-3xl text-theme-text-dark dark:text-theme-light tracking-wide drop-shadow-md whitespace-nowrap">
+                        Sahabat Traveling Lombok Anda
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dekorasi Vektor Ombak Animasi di Bagian Bawah -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 h-[80px] sm:h-[100px] md:h-[150px]">
+            <svg class="absolute bottom-0 w-[200%] h-full" viewBox="0 0 2400 150" preserveAspectRatio="none">
+                <path class="fill-theme-blue-light/70 dark:fill-theme-blue-dark/70 animate-wave-slow" d="M0,75 Q300,0 600,75 T1200,75 Q1500,0 1800,75 T2400,75 L2400,150 L0,150 Z"></path>
+                <path class="fill-theme-yellow-light/80 dark:fill-theme-yellow-dark/80 animate-wave-med" d="M0,90 Q300,150 600,90 T1200,90 Q1500,150 1800,90 T2400,90 L2400,150 L0,150 Z"></path>
+                <path class="fill-theme-light dark:fill-theme-dark animate-wave-fast transition-colors duration-300" d="M0,110 Q300,40 600,110 T1200,110 Q1500,40 1800,110 T2400,110 L2400,150 L0,150 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         KONTEN UTAMA HALAMAN
+         ========================================================================= -->
+    <main class="relative z-30 pb-20">
+        
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             SEGMEN 1: STANDAR EKSPLORASI (Menampilkan keunggulan layanan)
+             Menggunakan tata letak 'Bento Grid' yang modern dan elegan.
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="py-24 md:py-32 overflow-hidden">
+            <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+                
+                <!-- Judul Segmen (Rata Kanan) -->
+                <div class="reveal-right mb-16 md:mb-20 flex justify-end">
+                    <div class="relative text-right pr-5 md:pr-8">
+                        <div class="absolute right-0 top-1 bottom-1 md:top-2 md:bottom-2 w-1.5 bg-theme-yellow-light dark:bg-theme-yellow-dark rounded-l-md"></div>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-theme-text-dark dark:text-theme-light font-display uppercase tracking-tight leading-[1.1]">
+                            Standar <br/> <span class="text-theme-blue-light dark:text-theme-blue-dark">Eksplorasi</span>
+                        </h2>
+                    </div>
+                </div>
+                
+                <!-- Tata Letak Kotak Informasi (Grid) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    
+                    <!-- Kartu Info 1: Armada Premium (Lebar 2 Kolom) -->
+                    <div class="reveal-zoom md:col-span-2 group relative bg-theme-light dark:bg-theme-dark p-8 md:p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)] transition-all duration-500 overflow-hidden border border-theme-text-dark/5 dark:border-theme-light/5 flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-10" style="transition-delay: 100ms;">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50 z-0 transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://permatalomboktransport.github.io/assets/images/armada.png');"></div>
+                        <div class="absolute inset-0 bg-theme-light/70 dark:bg-theme-dark/80 z-0 transition-colors duration-500 group-hover:bg-theme-light/50 dark:group-hover:bg-theme-dark/60"></div>
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-theme-blue-light/10 dark:bg-theme-blue-dark/20 rounded-bl-full -mr-10 -mt-10 transition-transform duration-500 group-hover:scale-150 z-0"></div>
+                        
+                        <i data-lucide="shield-check" class="w-14 h-14 md:w-16 md:h-16 shrink-0 text-theme-blue-light dark:text-theme-blue-dark relative z-10 animate-float-icon"></i>
+                        
+                        <div class="relative z-10 w-full">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-display text-theme-text-dark dark:text-theme-light uppercase mb-3 sm:mb-4">Armada Premium</h3>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed text-sm md:text-base text-justify">
+                                Kendaraan sangat terawat yang selalu bersih, wangi, dan ber-AC dingin untuk perjalanan liburan yang rileks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Info 2: Sahabat Lokal (Standar 1 Kolom) -->
+                    <div class="reveal-down md:col-span-1 group relative bg-theme-light dark:bg-theme-dark p-8 md:p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(250,204,21,0.15)] transition-all duration-500 overflow-hidden border border-theme-text-dark/5 dark:border-theme-light/5 flex flex-col justify-center h-full" style="transition-delay: 200ms;">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50 z-0 transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://permatalomboktransport.github.io/assets/images/sahabat.jpg');"></div>
+                        <div class="absolute inset-0 bg-theme-light/70 dark:bg-theme-dark/80 z-0 transition-colors duration-500 group-hover:bg-theme-light/50 dark:group-hover:bg-theme-dark/60"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-theme-yellow-light/10 dark:bg-theme-yellow-dark/20 rounded-bl-full -mr-10 -mt-10 transition-transform duration-500 group-hover:scale-150 z-0"></div>
+                        
+                        <i data-lucide="users" class="w-12 h-12 md:w-14 md:h-14 text-theme-yellow-light dark:text-theme-yellow-dark mb-4 sm:mb-6 relative z-10 group-hover:scale-110 transition-transform"></i>
+                        
+                        <div class="relative z-10 w-full">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-display text-theme-text-dark dark:text-theme-light uppercase mb-3 sm:mb-4">Sahabat Lokal</h3>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed text-sm md:text-base text-justify">
+                                Supir ramah kami hafal rute alternatif, kuliner lezat, serta spot foto rahasia di seluruh Lombok.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Info 3: Rute Fleksibel (Standar 1 Kolom) -->
+                    <div class="reveal-blur md:col-span-1 group relative bg-theme-light dark:bg-theme-dark p-8 md:p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)] transition-all duration-500 overflow-hidden border border-theme-text-dark/5 dark:border-theme-light/5 flex flex-col justify-center h-full" style="transition-delay: 300ms;">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50 z-0 transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://permatalomboktransport.github.io/assets/images/rute.jpg');"></div>
+                        <div class="absolute inset-0 bg-theme-light/70 dark:bg-theme-dark/80 z-0 transition-colors duration-500 group-hover:bg-theme-light/50 dark:group-hover:bg-theme-dark/60"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-theme-blue-light/10 dark:bg-theme-blue-dark/20 rounded-bl-full -mr-10 -mt-10 transition-transform duration-500 group-hover:scale-150 z-0"></div>
+                        
+                        <i data-lucide="map" class="w-12 h-12 md:w-14 md:h-14 text-theme-blue-light dark:text-theme-blue-dark mb-4 sm:mb-6 relative z-10 group-hover:scale-110 transition-transform"></i>
+                        
+                        <div class="relative z-10 w-full">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-display text-theme-text-dark dark:text-theme-light uppercase mb-3 sm:mb-4">Rute Fleksibel</h3>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed text-sm md:text-base text-justify">
+                                Anda bebas mengubah tujuan wisata secara spontan karena kami sangat siap mengantar ke mana pun.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Info 4: Harga Terbaik (Lebar 2 Kolom) -->
+                    <div class="reveal-flip md:col-span-2 group relative bg-theme-light dark:bg-theme-dark p-8 md:p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(250,204,21,0.15)] transition-all duration-500 overflow-hidden border border-theme-text-dark/5 dark:border-theme-light/5 flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-10" style="transition-delay: 400ms;">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-50 z-0 transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://permatalomboktransport.github.io/assets/images/harga.jpg');"></div>
+                        <div class="absolute inset-0 bg-theme-light/70 dark:bg-theme-dark/80 z-0 transition-colors duration-500 group-hover:bg-theme-light/50 dark:group-hover:bg-theme-dark/60"></div>
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-theme-yellow-light/10 dark:bg-theme-yellow-dark/20 rounded-bl-full -mr-10 -mt-10 transition-transform duration-500 group-hover:scale-150 z-0"></div>
+                        
+                        <i data-lucide="tag" class="w-14 h-14 md:w-16 md:h-16 shrink-0 text-theme-yellow-light dark:text-theme-yellow-dark relative z-10 animate-float-icon"></i>
+                        
+                        <div class="relative z-10 w-full">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-display text-theme-text-dark dark:text-theme-light uppercase mb-3 sm:mb-4">Harga Terbaik</h3>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed text-sm md:text-base text-justify">
+                                Tarif jujur dan sangat bersahabat dengan pelayanan premium agar dompet aman serta hati selalu tenang.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             SEGMEN 2: LAYANAN TERBAIK KAMI
+             Desain tata letak gambar kiri-kanan bergantian (zig-zag).
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="py-24 md:py-32 bg-theme-light dark:bg-[#070d1e] transition-colors duration-300 relative overflow-hidden">
+            <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+                
+                <!-- Judul Segmen -->
+                <div class="reveal-left mb-16 md:mb-24 flex flex-row items-end justify-between gap-4">
+                    <div class="relative pl-5 md:pl-8">
+                        <div class="absolute left-0 top-1 bottom-1 md:top-2 md:bottom-2 w-1.5 bg-theme-blue-light dark:bg-theme-blue-dark rounded-r-md"></div>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-theme-text-dark dark:text-theme-light font-display uppercase tracking-tight leading-[1.1]">
+                            Layanan <br class="hidden sm:block" /> <span class="text-theme-yellow-light dark:text-theme-yellow-dark">Terbaik</span>
+                        </h2>
+                    </div>
+                    
+                    <!-- Tautan Pintas Harga -->
+                    <a href="https://permatalomboktransport.github.io/layanan" class="group flex items-center gap-1 md:gap-2 text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-light transition-colors mb-1 md:mb-2 shrink-0 cursor-pointer">
+                        <span class="text-[11px] sm:text-xs md:text-sm font-display uppercase tracking-widest">Cek Harga</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 md:group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="space-y-24 md:space-y-32">
+                    
+                    <!-- Layanan 1: Antar Jemput -->
+                    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 group">
+                        <div class="w-full lg:w-1/2 reveal-up flex flex-col items-start">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="text-4xl sm:text-5xl font-display text-theme-blue-light/20 dark:text-theme-blue-dark/30">01</span>
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display text-theme-text-dark dark:text-theme-light leading-tight">
+                                    DROP AND PICK-UP <span class="block text-sm sm:text-base md:text-xl text-theme-blue-light dark:text-theme-blue-dark tracking-widest mt-1">Antar Jemput Tamu</span>
+                                </h3>
+                            </div>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 mb-8 text-sm sm:text-base md:text-lg leading-relaxed text-justify w-full">
+                                Baru mendarat atau mau pulang? Duduk manis aja, tim kami siap antar jemput kamu dari bandara ke hotel atau sebaliknya tepat waktu. Bebas ribet, liburan langsung mulai dengan senyuman!
+                            </p>
+                            <a href="https://wa.me/6287859245125?text=Halo%20sahabat%2C%20saya%20ingin%20diantar%20atau%20dijemput%20di%20%3Clokasi%3E" target="_blank" rel="noreferrer" class="inline-flex items-center justify-between gap-4 bg-gradient-to-r from-theme-blue-light to-theme-blue-dark text-theme-light px-6 py-3 rounded-full uppercase tracking-widest text-xs sm:text-sm font-bold shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] transition-all group/btn">
+                                <span>Mulai 49K</span>
+                                <div class="bg-theme-light text-theme-blue-dark p-1.5 rounded-full group-hover/btn:translate-x-1 transition-transform">
+                                    <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="w-full lg:w-1/2 reveal-zoom relative">
+                            <div class="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl relative">
+                                <div class="absolute inset-0 bg-theme-blue-light/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                                <img src="https://permatalomboktransport.github.io/assets/images/sahabat.jpg" alt="Layanan Antar Jemput Bandara Lombok - Permata Lombok Transport" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1s]" onerror="this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"/>
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 bg-theme-light dark:bg-theme-dark p-4 rounded-2xl shadow-xl border border-theme-text-dark/5 dark:border-theme-light/5 z-20">
+                                <i data-lucide="plane" class="w-8 h-8 sm:w-10 sm:h-10 text-theme-blue-light dark:text-theme-blue-dark animate-float-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Layanan 2: Rental Mobil -->
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group">
+                        <div class="w-full lg:w-1/2 reveal-flip relative">
+                            <div class="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl relative bg-theme-light dark:bg-theme-dark border border-theme-text-dark/5 dark:border-theme-light/5">
+                                <div class="absolute inset-0 bg-theme-yellow-light/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                                <img src="https://permatalomboktransport.github.io/assets/images/armada.png" alt="Sewa Mobil Lepas Kunci dan Supir di Lombok - Permata Lombok Transport" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1s]" onerror="this.src='https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"/>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 bg-theme-light dark:bg-theme-dark p-4 rounded-2xl shadow-xl border border-theme-text-dark/5 dark:border-theme-light/5 z-20">
+                                <i data-lucide="car" class="w-8 h-8 sm:w-10 sm:h-10 text-theme-yellow-light dark:text-theme-yellow-dark animate-float-icon"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 reveal-right flex flex-col items-start">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="text-4xl sm:text-5xl font-display text-theme-yellow-light/20 dark:text-theme-yellow-dark/30">02</span>
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display text-theme-text-dark dark:text-theme-light leading-tight">
+                                    RENTCAR ALL IN <span class="block text-sm sm:text-base md:text-xl text-theme-yellow-light dark:text-theme-yellow-dark tracking-widest mt-1">Lepas Kunci /+ Supir</span>
+                                </h3>
+                            </div>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 mb-8 text-sm sm:text-base md:text-lg leading-relaxed text-justify w-full">
+                                Mau nyetir sendiri atau disetirin supir asik kami? Pilih armada terawat kesukaanmu dan nikmati kebebasan keliling Lombok seharian penuh. Harga super bersahabat, perjalanan aman, dompet tetap tenang!
+                            </p>
+                            <a href="https://wa.me/6287859245125?text=Halo%20sahabat%2C%20saya%20ingin%20sewa%20mobil%20lepas%20kunci%20atau%20plus%20supir%2C%20apakah%20masih%20ada%20stok%20%3Cmobil%3E" target="_blank" rel="noreferrer" class="inline-flex items-center justify-between gap-4 bg-gradient-to-r from-theme-yellow-light to-theme-yellow-dark text-theme-text-dark px-6 py-3 rounded-full uppercase tracking-widest text-xs sm:text-sm font-bold shadow-[0_8px_20px_rgba(250,204,21,0.3)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(250,204,21,0.4)] transition-all group/btn">
+                                <span>Mulai 299K</span>
+                                <div class="bg-theme-text-dark text-theme-yellow-light p-1.5 rounded-full group-hover/btn:translate-x-1 transition-transform">
+                                    <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Layanan 3: Wisata Lombok -->
+                    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 group">
+                        <div class="w-full lg:w-1/2 reveal-left flex flex-col items-start">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="text-4xl sm:text-5xl font-display text-theme-blue-light/20 dark:text-theme-blue-dark/30">03</span>
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display text-theme-text-dark dark:text-theme-light leading-tight">
+                                    LOMBOK TRAVELING <span class="block text-sm sm:text-base md:text-xl text-theme-blue-light dark:text-theme-blue-dark tracking-widest mt-1">Keliling Wisata Lombok</span>
+                                </h3>
+                            </div>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 mb-8 text-sm sm:text-base md:text-lg leading-relaxed text-justify w-full">
+                                Nggak perlu pusing mikir rute! Yuk, jelajahi cantiknya Mandalika, pesona Pink Beach, sampai sejuknya air terjun Rinjani bareng kami. Siapkan pose terbaikmu, biar supir kami yang jadi fotografernya!
+                            </p>
+                            <a href="https://wa.me/6287859245125?text=Halo%20sahabat%2C%20saya%20mau%20reservasi%20untuk%20wisata%20lombok%2C%20apakah%20kosong%20pada%20%3Chari%2C%20tanggal%3E" target="_blank" rel="noreferrer" class="inline-flex items-center justify-between gap-4 bg-gradient-to-r from-theme-blue-light to-theme-blue-dark text-theme-light px-6 py-3 rounded-full uppercase tracking-widest text-xs sm:text-sm font-bold shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] transition-all group/btn">
+                                <span>Mulai 599K</span>
+                                <div class="bg-theme-light text-theme-blue-dark p-1.5 rounded-full group-hover/btn:translate-x-1 transition-transform">
+                                    <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="w-full lg:w-1/2 reveal-zoom relative">
+                            <div class="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl relative">
+                                <div class="absolute inset-0 bg-theme-yellow-light/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                                <img src="https://permatalomboktransport.github.io/assets/images/harga.jpg" alt="Paket Wisata dan Tour Keliling Lombok Murah" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1s]" />
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 bg-theme-light dark:bg-theme-dark p-4 rounded-2xl shadow-xl border border-theme-text-dark/5 dark:border-theme-light/5 z-20">
+                                <i data-lucide="map-pin" class="w-8 h-8 sm:w-10 sm:h-10 text-theme-blue-light dark:text-theme-blue-dark animate-float-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layanan 4: Island Hopping -->
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group">
+                        <div class="w-full lg:w-1/2 reveal-flip relative">
+                            <div class="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl relative">
+                                <div class="absolute inset-0 bg-theme-blue-light/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                                <img src="https://permatalomboktransport.github.io/assets/images/rute.jpg" alt="Island Hopping Gili Trawangan Lombok - Sahabat Traveling Anda" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1s]" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"/>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 bg-theme-light dark:bg-theme-dark p-4 rounded-2xl shadow-xl border border-theme-text-dark/5 dark:border-theme-light/5 z-20">
+                                <i data-lucide="ship" class="w-8 h-8 sm:w-10 sm:h-10 text-theme-yellow-light dark:text-theme-yellow-dark animate-float-icon"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 reveal-up flex flex-col items-start">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="text-4xl sm:text-5xl font-display text-theme-yellow-light/20 dark:text-theme-yellow-dark/30">04</span>
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display text-theme-text-dark dark:text-theme-light leading-tight">
+                                    ISLAND HOPPING <span class="block text-sm sm:text-base md:text-xl text-theme-yellow-light dark:text-theme-yellow-dark tracking-widest mt-1">Jelajah Gili Lombok</span>
+                                </h3>
+                            </div>
+                            <p class="text-theme-text-dark/80 dark:text-theme-light/80 mb-8 text-sm sm:text-base md:text-lg leading-relaxed text-justify w-full">
+                                Waktunya nyebrang ke surga kecil! Rasakan serunya main bareng penyu di Gili Trawangan atau nikmati ketenangan Gili Nanggu. Perjalanan laut aman, nyaman, dan pastinya bikin gagal move on!
+                            </p>
+                            <a href="https://wa.me/6287859245125?text=Halo%20sahabat%2C%20bisakah%20antar%20saya%20untuk%20jelajah%20ke%20%3Cgili%3E" target="_blank" rel="noreferrer" class="inline-flex items-center justify-between gap-4 bg-gradient-to-r from-theme-yellow-light to-theme-yellow-dark text-theme-text-dark px-6 py-3 rounded-full uppercase tracking-widest text-xs sm:text-sm font-bold shadow-[0_8px_20px_rgba(250,204,21,0.3)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(250,204,21,0.4)] transition-all group/btn">
+                                <span>Mulai 399K</span>
+                                <div class="bg-theme-text-dark text-theme-yellow-light p-1.5 rounded-full group-hover/btn:translate-x-1 transition-transform">
+                                    <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Layanan 5: Paket Rombongan (Desain Spanduk Penuh) -->
+                    <div class="reveal-blur relative rounded-3xl overflow-hidden shadow-2xl group mt-10">
+                        <div class="absolute inset-0 bg-theme-text-dark/80 dark:bg-theme-dark/90 z-10"></div>
+                        <img src="https://permatalomboktransport.github.io/assets/images/family.jpg" alt="Sewa Bus dan Paket Tour Rombongan Lombok" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] z-0"/>
+                        
+                        <div class="relative z-20 p-8 md:p-16 flex flex-col md:flex-row gap-8 lg:gap-16 items-center justify-between">
+                            <div class="md:w-1/2 w-full flex flex-col items-start">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <i data-lucide="bus" class="w-12 h-12 sm:w-16 sm:h-16 text-theme-yellow-light animate-float-icon"></i>
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display text-theme-light leading-tight">
+                                        GROUP TOUR <span class="block text-sm sm:text-base md:text-xl text-theme-blue-light tracking-widest mt-1">Keluarga Besar</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <div class="md:w-1/2 w-full flex flex-col items-start">
+                                <p class="text-theme-light text-sm sm:text-base md:text-lg mb-8 leading-relaxed text-justify w-full">
+                                    Bawa rombongan sekantor atau keluarga besar? Gampang! Kami siapkan bus lega, AC dingin, lengkap dengan karaoke. Keseruan liburan bareng-bareng langsung terasa sejak langkah pertama masuk ke dalam bus!
+                                </p>
+                                <a href="https://wa.me/6287859245125?text=Halo%20sahabat%2C%20kami%20mau%20tour%2C%20apakah%20kosong%20pada%20%3Chari%2C%20tanggal%3E" target="_blank" rel="noreferrer" class="inline-flex items-center justify-between gap-4 bg-gradient-to-r from-theme-blue-light to-theme-blue-dark text-theme-light px-6 py-3 rounded-full uppercase tracking-widest text-xs sm:text-sm font-bold shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] transition-all group/btn">
+                                    <span>Mulai 999K</span>
+                                    <div class="bg-theme-light text-theme-blue-dark p-1.5 rounded-full group-hover/btn:translate-x-1 transition-transform">
+                                        <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             SEGMEN 3: DESTINASI UNGGULAN (Dinamis dengan JavaScript)
+             Bagian ini akan diisi secara otomatis oleh JavaScript dari file destinasi.html.
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section id="destinasi-section" class="py-24 md:py-32 overflow-hidden bg-theme-light dark:bg-[#070d1e] transition-colors duration-300 relative" style="display: none;">
+            <div class="container mx-auto max-w-7xl">
+                
+                <!-- Judul Segmen Destinasi -->
+                <div class="reveal-down text-center mb-16 md:mb-20 px-6 md:px-12">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl text-theme-text-dark dark:text-theme-light font-display uppercase tracking-tight">
+                        Destinasi <span class="text-theme-blue-light dark:text-theme-blue-dark">Unggulan</span>
+                    </h2>
+                </div>
+
+                <!-- Pembungkus Slider Gambar (Marquee) -->
+                <div class="relative w-full overflow-hidden mt-4 reveal-up">
+                    
+                    <!-- Efek Gradasi (Fading) pada Sisi Kiri dan Kanan Slider -->
+                    <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-theme-light dark:from-[#070d1e] to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-theme-light dark:from-[#070d1e] to-transparent z-10 pointer-events-none"></div>
+                    
+                    <!-- 
+                        Wadah untuk menampung elemen gambar.
+                        Elemen HTML gambar kini dihapus dari sini dan akan diproduksi
+                        oleh fungsi JavaScript 'muatDestinasiDinamis()' agar terhubung ke destinasi.html
+                    -->
+                    <div id="destinasi-slider-container" class="flex w-max animate-marquee-left gap-6 md:gap-8 px-6 md:px-8">
+                        <!-- Data gambar akan dirender di sini oleh sistem JS -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================================
+         BAGIAN KAKI (FOOTER)
+         Menampilkan deskripsi singkat, hak cipta, dan tautan sosial media.
+         ========================================================================= -->
+    <footer class="pt-16 pb-8 bg-theme-dark relative z-30 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-12 mb-12">
+                
+                <!-- Identitas Perusahaan (Kiri) -->
+                <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left reveal-up">
+                    <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" alt="Logo Permata Lombok Transport" class="w-12 h-12 md:w-14 md:h-14 mb-4 drop-shadow-md">
+                    <h2 class="text-base sm:text-lg md:text-xl font-display tracking-tight leading-tight mb-2">
+                        <span class="text-theme-yellow-light dark:text-theme-yellow-dark">PERMATA</span>
+                        <span class="text-theme-blue-light dark:text-theme-blue-dark">LOMBOK</span>
+                        <span class="text-theme-light">TRANSPORT</span>
+                    </h2>
+                    <p class="text-theme-light text-xs sm:text-sm tracking-widest font-display">
+                        Sahabat Traveling Lombok Anda
+                    </p>
+                </div>
+                
+                <!-- Deskripsi Perusahaan (Kanan) -->
+                <div class="w-full md:w-1/2 reveal-up" style="transition-delay: 200ms;">
+                    <p class="text-theme-light/80 text-justify leading-relaxed text-sm md:text-base">
+                        Permata Lombok Transport adalah solusi mobilitas dan wisata premium di Lombok. Kami menghadirkan pengalaman liburan tak terlupakan dengan armada eksklusif yang terawat, rute perjalanan fleksibel, dan supir berdedikasi yang siap menjadi pemandu lokal Anda. Nikmati kenyamanan sewa mobil, antar-jemput bandara, hingga paket tur harian.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Area Hak Cipta & Sosial Media -->
+            <div class="border-t border-theme-light/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 reveal-blur" style="transition-delay: 300ms;">
+                <p class="text-theme-light/70 text-xs sm:text-sm font-sans font-medium text-center md:text-left">
+                    &copy; 2026 Permata Lombok Transport.
+                </p>
+                
+                <!-- Ikon Sosial Media Menggunakan Format SVG Bawaan (Anti Gagal Muat) -->
+                <div class="flex items-center gap-6 text-theme-light/70">
+                    <a href="https://facebook.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Facebook" class="hover:text-theme-blue-light transition-colors hover:-translate-y-1 transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
+                            <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.7 226.4 209.3 245V327.7h-63V256h63v-54.6c0-62.2 37-96.5 93.7-96.5 27.1 0 55.5 4.8 55.5 4.8v61h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h68.8l-11 71.7h-57.8V501C413.3 482.4 504 379.8 504 256z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Instagram" class="hover:text-pink-500 transition-colors hover:-translate-y-1 transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="TikTok" class="hover:text-theme-light transition-colors hover:-translate-y-1 transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 sm:w-5 sm:h-5 fill-current">
+                            <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com/@permatalomboktransport" target="_blank" rel="noreferrer" aria-label="YouTube" class="hover:text-red-500 transition-colors hover:-translate-y-1 transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
+                            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         TOMBOL WHATSAPP MELAYANG
+         Terus berada di pojok kanan bawah agar mudah dihubungi kapan saja.
+         ========================================================================= -->
+    <a href="https://wa.me/6287859245125" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-whatsapp hover:bg-whatsapp-hover text-theme-light p-3 md:p-4 rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.4)] transition-colors duration-300 animate-bounce-subtle flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-7 h-7 md:w-9 md:h-9 fill-current">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <!-- =========================================================================
+         SISTEM JAVASCRIPT UTAMA
+         Otak dari seluruh interaksi halaman, disusun rapi menjadi fungsi-fungsi modular.
+         ========================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- FUNGSI 1: Memuat Ikon Dasar ---
+            const inisialisasiIkon = () => {
+                lucide.createIcons();
+            };
+
+            // --- FUNGSI 2: Mengelola Mode Gelap/Terang ---
+            const aturModeTema = () => {
+                const themeToggleBtn = document.getElementById('theme-toggle');
+                const darkIcon = document.getElementById('theme-toggle-dark-icon');
+                const lightIcon = document.getElementById('theme-toggle-light-icon');
+                
+                // Pemeriksaan awal berdasarkan memori lokal atau preferensi sistem pengguna
+                if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                    lightIcon.classList.remove('hidden');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    darkIcon.classList.remove('hidden');
+                }
+
+                // Logika ketika tombol tema diklik
+                themeToggleBtn.addEventListener('click', () => {
+                    darkIcon.classList.toggle('hidden');
+                    lightIcon.classList.toggle('hidden');
+
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
+                });
+            };
+
+            // --- FUNGSI 3: Mengelola Urutan Animasi Pemuatan Layar (Preloader) ---
+            const kelolaPreloader = () => {
+                const heroImageUrl = 'https://permatalomboktransport.github.io/assets/images/hero.png';
+                
+                // Menunggu gambar hero termuat atau minimal menunggu 2.5 detik
+                const imageLoadPromise = new Promise((resolve) => {
+                    const img = new Image();
+                    img.src = heroImageUrl;
+                    img.onload = resolve;
+                    img.onerror = resolve; // Tetap lanjutkan walau gambar gagal dimuat
+                });
+                const minTimePromise = new Promise((resolve) => setTimeout(resolve, 2500));
+
+                Promise.all([imageLoadPromise, minTimePromise]).then(() => {
+                    const preloaderContent = document.getElementById('preloader-content');
+                    if (preloaderContent) preloaderContent.style.opacity = '0'; // Pudarkan logo
+                    
+                    setTimeout(() => {
+                        const preloader = document.getElementById('preloader');
+                        if (preloader) preloader.style.transform = 'translateX(-100%)'; // Geser layar
+                        
+                        setTimeout(() => {
+                            if (preloader) preloader.style.display = 'none';
+                            document.getElementById('body').classList.remove('overflow-hidden');
+                            
+                            const heroText = document.getElementById('hero-text-content');
+                            if (heroText) heroText.classList.add('show'); // Munculkan teks utama
+                            
+                            inisialisasiScrollReveal(); // Aktifkan sistem pemantau gulir
+                        }, 1800);
+                    }, 1100);
+                });
+            };
+
+            // --- FUNGSI 4: Transparansi Efek Kaca Pada Header Saat Digulir ---
+            const efekHeaderScroll = () => {
+                const headerInner = document.getElementById('header-inner');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        headerInner.classList.remove('bg-transparent', 'py-6');
+                        headerInner.classList.add('bg-theme-light/90', 'dark:bg-theme-dark/90', 'backdrop-blur-md', 'py-4', 'shadow-md');
+                    } else {
+                        headerInner.classList.add('bg-transparent', 'py-6');
+                        headerInner.classList.remove('bg-theme-light/90', 'dark:bg-theme-dark/90', 'backdrop-blur-md', 'py-4', 'shadow-md');
+                    }
+                });
+            };
+
+            // --- FUNGSI 5: Buka-Tutup Menu Navigasi Seluler ---
+            const kelolaMenuMobile = () => {
+                const dropdown = document.getElementById('mobile-dropdown');
+                const btnBuka = document.getElementById('mobile-menu-btn');
+                const btnTutup = document.getElementById('close-mobile-menu'); 
+                let menuTerbuka = false;
+
+                const alihkanMenu = () => {
+                    menuTerbuka = !menuTerbuka;
+                    if (menuTerbuka) {
+                        dropdown.classList.remove('opacity-0', 'pointer-events-none');
+                        dropdown.classList.add('opacity-100');
+                        document.body.style.overflow = 'hidden'; // Matikan gulir luar
+                    } else {
+                        dropdown.classList.remove('opacity-100');
+                        dropdown.classList.add('opacity-0', 'pointer-events-none');
+                        document.body.style.overflow = '';
+                    }
+                };
+
+                btnBuka.addEventListener('click', alihkanMenu);
+                if (btnTutup) btnTutup.addEventListener('click', alihkanMenu);
+            };
+
+            // --- FUNGSI 6: Menampilkan Elemen Secara Dinamis Saat Layar Digulir ---
+            const inisialisasiScrollReveal = () => {
+                const pengaturanPengamat = {
+                    root: null,
+                    rootMargin: '0px 0px -50px 0px',
+                    threshold: 0.1 
+                };
+
+                const pengamat = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Jangan ulangi animasi
+                        }
+                    });
+                }, pengaturanPengamat);
+
+                const elemenDiperhatikan = document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-blur, .reveal-flip');
+                elemenDiperhatikan.forEach(el => pengamat.observe(el));
+            };
+
+            // --- FUNGSI 7: Memuat Konten Destinasi dari Halaman Lain Secara Dinamis ---
+            const muatDestinasiDinamis = async () => {
+                const wadahSlider = document.getElementById('destinasi-slider-container');
+                const bagianDestinasi = document.getElementById('destinasi-section');
+                if (!wadahSlider) return;
+
+                // Memulai dengan data kosong (tidak ada lagi gambar fallback/cadangan)
+                let koleksiGambar = [];
+
+                try {
+                    // Berusaha mengambil file destinasi.html
+                    const respon = await fetch('destinasi.html');
+                    
+                    if (respon.ok) {
+                        const teksHtml = await respon.text();
+                        const parser = new DOMParser();
+                        const dokumenBaru = parser.parseFromString(teksHtml, 'text/html');
+                        
+                        // Mencari semua elemen gambar yang ada di dokumen tersebut
+                        const elemenGambar = dokumenBaru.querySelectorAll('img');
+                        
+                        // Jika ditemukan gambar, masukkan ke dalam koleksi
+                        if (elemenGambar.length > 0) {
+                            // Ambil tepat 9 gambar saja (atau kurang jika tidak mencapai 9)
+                            const batasMaksimal = Math.min(elemenGambar.length, 9);
+                            for (let i = 0; i < batasMaksimal; i++) {
+                                koleksiGambar.push({
+                                    src: elemenGambar[i].src,
+                                    alt: elemenGambar[i].alt || `Destinasi Lombok ${i + 1}`
+                                });
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.warn("Informasi: File 'destinasi.html' belum memiliki isi gambar atau gagal dimuat.");
+                }
+
+                // Jika ternyata tidak ada gambar yang didapat, biarkan kosong/sembunyikan segmen ini
+                if (koleksiGambar.length === 0) {
+                    if (bagianDestinasi) bagianDestinasi.style.display = 'none';
+                    return; // Hentikan eksekusi sampai di sini
+                }
+
+                // Jika ada gambar, tampilkan segmen destinasi
+                if (bagianDestinasi) bagianDestinasi.style.display = 'block';
+
+                // Fungsi pembantu untuk membuat blok HTML (berisi gambar) dengan gaya Tailwind yang sama
+                const produksiStrukturHTML = () => {
+                    return koleksiGambar.map(gbr => `
+                        <div class="w-[250px] md:w-[350px] aspect-[4/5] rounded-3xl overflow-hidden shadow-xl shrink-0 hover:scale-105 transition-transform cursor-pointer">
+                            <img src="${gbr.src}" alt="${gbr.alt}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                        </div>
+                    `).join('');
+                };
+
+                // Rahasia animasi 'marquee' tanpa henti (seamless) adalah dengan mencetak 
+                // susunan gambar yang persis sama sebanyak dua kali.
+                wadahSlider.innerHTML = produksiStrukturHTML() + produksiStrukturHTML();
+            };
+
+            // --- Mengeksekusi Semua Fungsi di Atas ---
+            inisialisasiIkon();
+            aturModeTema();
+            kelolaPreloader();
+            efekHeaderScroll();
+            kelolaMenuMobile();
+            muatDestinasiDinamis();
+        });
+    </script>
+</body>
+</html>
