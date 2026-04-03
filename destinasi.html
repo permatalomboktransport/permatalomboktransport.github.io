@@ -173,7 +173,7 @@
 <body class="bg-theme-light text-theme-text-dark dark:bg-theme-dark dark:text-theme-light transition-colors duration-300 overflow-x-hidden" id="body">
 
     <!-- =========================================================================
-         LAYAR PEMUATAN (PRELOADER) - 100% IDENTIK DENGAN BERANDA
+         LAYAR PEMUATAN (PRELOADER)
          Menutupi layar penuh saat pertama kali dibuka, berdenyut (heartbeat), 
          kemudian menghilang secara halus memanggil isi halaman.
          ========================================================================= -->
@@ -188,7 +188,7 @@
     </div>
 
     <!-- =========================================================================
-         BAGIAN NAVIGASI ATAS (HEADER) - 100% IDENTIK DENGAN BERANDA
+         BAGIAN NAVIGASI ATAS (HEADER)
          Berisi logo perusahaan, tombol mode gelap/terang, dan menu seluler.
          Otomatis menambahkan efek kaca (glassmorphism) saat halaman digulir.
          ========================================================================= -->
@@ -227,20 +227,18 @@
                 <i data-lucide="x" class="w-10 h-10 md:w-12 md:h-12 hover:rotate-90 transition-transform duration-300"></i>
             </button>
 
-            <!-- Tautan Navigasi (Tautan 'Destinasi' menyala/aktif di halaman ini) -->
+            <!-- Tautan Navigasi (Tautan disamakan warna semua agar tidak ada yang aktif) -->
             <nav class="flex flex-col space-y-8 text-center" id="mobile-menu-content">
                 <a href="/" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Beranda</a>
                 <a href="tentang" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Tentang</a>
                 <a href="layanan" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Layanan</a>
-                <a href="destinasi" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-yellow-dark dark:text-theme-yellow-light transition-colors font-display tracking-tight drop-shadow-md">Destinasi</a>
+                <a href="destinasi" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Destinasi</a>
             </nav>
         </div>
     </header>
 
     <!-- =========================================================================
-         BAGIAN HERO KHUSUS HALAMAN DESTINASI (DESTINATION HERO SECTION)
-         Berisi gambar latar dengan filter gelap dan judul pengantar.
-         Dibuat lebih pendek (60vh) agar Galeri Bento Grid langsung menarik perhatian.
+         BAGIAN HERO KHUSUS HALAMAN DESTINASI
          ========================================================================= -->
     <section id="hero" class="relative h-[60vh] w-full flex items-center overflow-hidden bg-theme-dark">
         
@@ -269,15 +267,12 @@
     <!-- =========================================================================
          KONTEN UTAMA: GALERI DESTINASI (BENTO GRID)
          Menampilkan gambar dengan tata letak asimetris yang modern (Bento Box).
-         Gambar disuntikkan secara dinamis via JavaScript di bagian bawah.
          ========================================================================= -->
     <main class="relative z-30 pb-24 bg-theme-light dark:bg-theme-dark transition-colors duration-300 min-h-[40vh]">
         <section class="py-12 md:py-16">
             <div class="container mx-auto px-4 md:px-8 max-w-[1400px]">
                 
                 <!-- Kontainer Grid Bento -->
-                <!-- Struktur Grid: 1 Kolom (Ponsel), 2 Kolom (Tablet), 4 Kolom (Desktop) -->
-                <!-- Tinggi otomatis baris diset di 200px hingga 300px agar responsif -->
                 <div id="bento-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[250px] sm:auto-rows-[250px] md:auto-rows-[300px] gap-4 md:gap-6">
                     <!-- Elemen Gambar akan disuntikkan otomatis oleh JavaScript ke dalam wadah ini -->
                 </div>
@@ -287,9 +282,7 @@
     </main>
 
     <!-- =========================================================================
-         BAGIAN KAKI HALAMAN (FOOTER) - 100% IDENTIK DENGAN BERANDA
-         Menampilkan nama merek, deskripsi SEO, hak cipta perusahaan, dan 
-         tautan menuju berbagai platform sosial media.
+         BAGIAN KAKI HALAMAN (FOOTER)
          ========================================================================= -->
     <footer class="pt-16 pb-8 bg-theme-dark relative z-30 overflow-hidden">
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
@@ -322,7 +315,7 @@
                     &copy; 2026 Permata Lombok Transport.
                 </p>
                 
-                <!-- Kumpulan Ikon Sosial Media (Menggunakan format SVG Inline bawaan agar anti gagal muat) -->
+                <!-- Kumpulan Ikon Sosial Media -->
                 <div class="flex items-center gap-6 text-theme-light/70">
                     <a href="https://facebook.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Facebook" class="hover:text-theme-blue-light transition-colors hover:-translate-y-1 transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
@@ -350,9 +343,7 @@
     </footer>
 
     <!-- =========================================================================
-         TOMBOL WHATSAPP MELAYANG (FLOATING ACTION BUTTON) - 100% IDENTIK DENGAN BERANDA
-         Terus berada di pojok kanan bawah agar mudah dihubungi kapan saja, 
-         di mana pun batas gulir (scroll) pengguna berada.
+         TOMBOL WHATSAPP MELAYANG
          ========================================================================= -->
     <a href="https://wa.me/6287859245125" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-whatsapp hover:bg-whatsapp-hover text-theme-light p-3 md:p-4 rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.4)] transition-colors duration-300 animate-bounce-subtle flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-7 h-7 md:w-9 md:h-9 fill-current">
@@ -362,7 +353,6 @@
 
     <!-- =========================================================================
          SISTEM JAVASCRIPT UTAMA (OTAK WEBSITE)
-         Disusun rapi secara modular dengan tambahan logika rendering Grid.
          ========================================================================= -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -378,7 +368,6 @@
                 const darkIcon = document.getElementById('theme-toggle-dark-icon');
                 const lightIcon = document.getElementById('theme-toggle-light-icon');
                 
-                // Setel tema berdasarkan memori (localStorage) saat halaman dimuat
                 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark');
                     lightIcon.classList.remove('hidden'); 
@@ -387,7 +376,6 @@
                     darkIcon.classList.remove('hidden'); 
                 }
 
-                // Logika peralihan saat tombol diklik
                 themeToggleBtn.addEventListener('click', () => {
                     darkIcon.classList.toggle('hidden');
                     lightIcon.classList.toggle('hidden');
@@ -406,7 +394,6 @@
             const kelolaPreloader = () => {
                 const heroImageUrl = 'https://permatalomboktransport.github.io/assets/images/hero.png';
                 
-                // Pastikan gambar hero utama sudah termuat
                 const imageLoadPromise = new Promise((resolve) => {
                     const img = new Image();
                     img.src = heroImageUrl;
@@ -414,25 +401,24 @@
                     img.onerror = resolve; 
                 });
                 
-                // Beri waktu minimal 2 detik agar logo perusahaan terlihat
                 const minTimePromise = new Promise((resolve) => setTimeout(resolve, 2000));
 
                 Promise.all([imageLoadPromise, minTimePromise]).then(() => {
                     const preloaderContent = document.getElementById('preloader-content');
-                    if (preloaderContent) preloaderContent.style.opacity = '0'; // Pudarkan logo
+                    if (preloaderContent) preloaderContent.style.opacity = '0'; 
                     
                     setTimeout(() => {
                         const preloader = document.getElementById('preloader');
-                        if (preloader) preloader.style.transform = 'translateX(-100%)'; // Tarik layar
+                        if (preloader) preloader.style.transform = 'translateX(-100%)'; 
                         
                         setTimeout(() => {
                             if (preloader) preloader.style.display = 'none'; 
-                            document.getElementById('body').classList.remove('overflow-hidden'); // Izinkan gulir
+                            document.getElementById('body').classList.remove('overflow-hidden'); 
                             
                             const heroText = document.getElementById('hero-text-content');
-                            if (heroText) heroText.classList.add('show'); // Tampilkan teks hero
+                            if (heroText) heroText.classList.add('show'); 
                             
-                            inisialisasiScrollReveal(); // Aktifkan sistem animasi gulir
+                            inisialisasiScrollReveal(); 
                         }, 1800);
                     }, 800);
                 });
@@ -452,7 +438,7 @@
                 });
             };
 
-            // --- FUNGSI 5: Buka-Tutup Menu Navigasi Seluler (Mobile Menu) ---
+            // --- FUNGSI 5: Buka-Tutup Menu Navigasi Seluler ---
             const kelolaMenuMobile = () => {
                 const dropdown = document.getElementById('mobile-dropdown');
                 const btnBuka = document.getElementById('mobile-menu-btn');
@@ -476,7 +462,7 @@
                 if (btnTutup) btnTutup.addEventListener('click', alihkanMenu);
             };
 
-            // --- FUNGSI 6: Menampilkan Elemen Secara Dinamis Saat Layar Digulir ---
+            // --- FUNGSI 6: Menampilkan Elemen Saat Digulir ---
             const inisialisasiScrollReveal = () => {
                 const pengaturanPengamat = {
                     root: null,
@@ -497,33 +483,26 @@
                 elemenDiperhatikan.forEach(el => pengamat.observe(el)); 
             };
 
-            // --- FUNGSI 7: Menyuntikkan Data Gambar Bento Grid (Galeri Dinamis) ---
+            // --- FUNGSI 7: Menyuntikkan Data Blog/Arsip Markdown ke Bento Grid ---
             const renderBentoGrid = () => {
-                // DATA SEMENTARA (9 Gambar Pantai & Air Terjun dari Unsplash)
-                // Memiliki properti 'styleGrid' untuk mengatur proporsi kotak bento (lebar & tinggi).
-                const posts = [
-                    { id: 'pantai-1', judul: 'Pantai Tropis Kuta', gambarGrid: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-2 md:row-span-2 sm:col-span-2 sm:row-span-2' }, // Kotak paling besar (kiri atas)
-                    { id: 'terjun-1', judul: 'Air Terjun Sendang Gile', gambarGrid: 'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-1 md:row-span-1' }, // Kotak standar
-                    { id: 'pantai-2', judul: 'Tanjung Aan', gambarGrid: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-1 md:row-span-1' }, // Kotak standar
-                    { id: 'terjun-2', judul: 'Tiu Kelep', gambarGrid: 'https://plus.unsplash.com/premium_photo-1661883809211-eb59f508b3d9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', styleGrid: 'md:col-span-1 md:row-span-2 sm:col-span-1 sm:row-span-2' }, // Kotak memanjang ke bawah (vertikal)
-                    { id: 'pantai-3', judul: 'Selong Belanak', gambarGrid: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-1 md:row-span-1' }, // Kotak standar
-                    { id: 'terjun-3', judul: 'Benang Kelambu', gambarGrid: 'https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-2 md:row-span-1 sm:col-span-2' }, // Kotak memanjang ke samping (horizontal)
-                    { id: 'pantai-4', judul: 'Pantai Pink', gambarGrid: 'https://images.unsplash.com/photo-1520116468816-95b69f847357?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-1 md:row-span-1' }, // Kotak standar
-                    { id: 'terjun-4', judul: 'Benang Stokel', gambarGrid: 'https://images.unsplash.com/photo-1502754400466-c87ff3039da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-1 md:row-span-1' }, // Kotak standar
-                    { id: 'pantai-5', judul: 'Gili Trawangan', gambarGrid: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', styleGrid: 'md:col-span-2 md:row-span-1 sm:col-span-2' } // Kotak memanjang ke samping (horizontal)
-                ];
+                // =================================================================
+                // PERSIAPAN SISTEM BLOG/MARKDOWN:
+                // Array 'posts' di bawah ini sengaja DIKOSONGKAN saat ini.
+                // Nantinya, Anda bisa menggunakan Static Site Generator (Hugo, Jekyll)
+                // atau sistem fetch JS untuk menarik data dari file-file .md Anda 
+                // yang menggunakan 'post.html' sebagai layoutnya, lalu mengisi array ini.
+                // =================================================================
+                const posts = []; 
 
                 const gridContainer = document.getElementById('bento-grid');
 
-                // Logika penyuntikan elemen HTML untuk galeri (Hanya jalan jika ada data posts)
                 if (posts.length > 0 && gridContainer) {
+                    // Logika jika ada arsip post
                     posts.forEach((post, index) => {
-                        // Delay bertingkat (staggered delay) agar gambar muncul satu-per-satu bergantian
                         const delay = (index % 5) * 100; 
                         
-                        // Menggunakan "javascript:void(0)" untuk tautan sementara agar web tidak melompat ke atas saat diklik
                         const cardHTML = `
-                            <a href="javascript:void(0)" class="reveal-zoom relative block rounded-3xl overflow-hidden shadow-md group ${post.styleGrid} cursor-pointer border border-theme-text-dark/5 dark:border-theme-light/5" style="transition-delay: ${delay}ms;">
+                            <a href="${post.url}" class="reveal-zoom relative block rounded-3xl overflow-hidden shadow-md group ${post.styleGrid} cursor-pointer border border-theme-text-dark/5 dark:border-theme-light/5" style="transition-delay: ${delay}ms;">
                                 <!-- Gambar -->
                                 <img src="${post.gambarGrid}" alt="${post.judul}" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110">
                                 
@@ -539,13 +518,25 @@
                         `;
                         gridContainer.innerHTML += cardHTML;
                     });
+                } else if (gridContainer) {
+                    // LOGIKA SAAT ARSIP MASIH KOSONG (EMPTY STATE)
+                    gridContainer.classList.remove('grid', 'grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-4', 'auto-rows-[250px]', 'sm:auto-rows-[250px]', 'md:auto-rows-[300px]');
+                    gridContainer.innerHTML = `
+                        <div class="flex flex-col items-center justify-center py-20 text-center reveal-up">
+                            <!-- SVG Ikon Folder Kosong (Agar tidak error saat dipanggil dinamis) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-theme-text-dark/20 dark:text-theme-light/20 mb-6 animate-bounce-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                            <h3 class="text-5xl md:text-7xl font-display text-theme-text-dark/40 dark:text-theme-light/40 mb-2 uppercase tracking-wide">404</h3>
+                        </div>
+                    `;
                 }
             };
 
-            // --- Menyalakan Mesin: Mengeksekusi Semua Fungsi di Atas ---
+            // --- Menyalakan Mesin ---
             inisialisasiIkon();
             aturModeTema();
-            renderBentoGrid(); // <== Panggil fungsi render grid ini LEBIH DULU sebelum preloader
+            renderBentoGrid(); // Panggil fungsi grid ini, sekarang akan memicu Empty State
             kelolaPreloader();
             efekHeaderScroll();
             kelolaMenuMobile();
