@@ -1,0 +1,1 @@
+User-agent: *Allow: /Jangan telusuri halaman errorDisallow: /404Disallow: /404.htmlBeri tahu Google di mana letak Sitemap kitaSitemap: https://www.google.com/search?q=https://permatalomboktransport.com/sitemap.xml
