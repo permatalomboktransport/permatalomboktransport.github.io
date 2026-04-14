@@ -273,9 +273,9 @@
             <!-- Tautan Navigasi (Tautan disamakan warna semua agar tidak ada yang aktif) -->
             <nav class="flex flex-col space-y-8 text-center" id="mobile-menu-content">
                 <a href="/" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Beranda</a>
-                <a href="/tentang" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Tentang</a>
-                <a href="/layanan" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Layanan</a>
-                <a href="/destinasi" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Destinasi</a>
+                <a href="tentang" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Tentang</a>
+                <a href="layanan" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Layanan</a>
+                <a href="destinasi" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Destinasi</a>
             </nav>
         </div>
     </header>
@@ -308,8 +308,8 @@
     </section>
 
     <!-- =========================================================================
-         KONTEN UTAMA: GALERI DESTINASI (BENTO GRID - JEKYLL LIQUID)
-         Menampilkan gambar dengan tata letak asimetris menggunakan data dari _posts.
+         KONTEN UTAMA: GALERI DESTINASI (BENTO GRID)
+         Menampilkan gambar dengan tata letak asimetris yang modern (Bento Box).
          ========================================================================= -->
     <main class="relative z-30 pb-24 bg-theme-light dark:bg-theme-dark transition-colors duration-300 min-h-[40vh]">
         <section class="py-12 md:py-16">
@@ -317,47 +317,16 @@
                 
                 <!-- Kontainer Grid Bento -->
                 <div id="bento-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[250px] sm:auto-rows-[250px] md:auto-rows-[300px] gap-4 md:gap-6">
-                    
-                    <!-- LOGIKA JEKYLL: Looping semua data Markdown dari folder _posts -->
-                    {% for post in site.posts %}
-                        
-                        <!-- Membuat jeda animasi (delay) agar gambar muncul berurutan (gelombang) -->
-                        {% assign delay = forloop.index0 | modulo: 6 | times: 100 %}
-                        
-                        <!-- Template HTML untuk 1 buah kotak gambar destinasi -->
-                        <!-- {{ post.style_grid }} diambil dari front matter markdown (contoh: md:col-span-2) -->
-                        <a href="{{ site.baseurl }}{{ post.url }}" class="reveal-zoom relative block rounded-3xl overflow-hidden shadow-md group {{ post.style_grid | default: 'md:col-span-1 md:row-span-1' }} cursor-pointer border border-theme-text-dark/5 dark:border-theme-light/5" style="transition-delay: {{ delay }}ms;">
-                            <!-- Gambar Utama -->
-                            <img src="{{ post.gambar_thumbnail }}" alt="{{ post.title }}" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110">
-                            
-                            <!-- Filter Gelap Bergradasi (Mulai terlihat saat disorot kursor) -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-theme-dark/90 via-theme-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            <!-- Area Teks Judul & Ikon Panah -->
-                            <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                                <span class="text-theme-yellow-light text-xs md:text-sm font-bold tracking-widest uppercase mb-2 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-100">Jelajahi <i data-lucide="arrow-right" class="inline w-3 h-3 md:w-4 md:h-4"></i></span>
-                                <h3 class="text-theme-light font-display text-xl md:text-2xl lg:text-3xl opacity-90 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 uppercase tracking-widest drop-shadow-md">{{ post.title }}</h3>
-                            </div>
-                        </a>
-                        
-                    {% else %}
-                        
-                        <!-- LOGIKA CADANGAN: Jika suatu hari data posts dikosongkan, tampilkan Ikon Folder Kosong (404) -->
-                        <div class="col-span-full flex flex-col items-center justify-center py-20 text-center reveal-up">
-                            <h3 class="text-5xl md:text-7xl font-display text-theme-text-dark/40 dark:text-theme-light/40 mb-2 uppercase tracking-wide">404</h3>
-                        </div>
-                        
-                    {% endfor %}
-
+                    <!-- Elemen Gambar akan disuntikkan otomatis oleh JavaScript ke dalam wadah ini -->
                 </div>
 
             </div>
         </section>
     </main>
 
-<!-- =========================================================================
+    <!-- =========================================================================
          BAGIAN KAKI HALAMAN (FOOTER)
-     ========================================================================= -->
+         ========================================================================= -->
     <footer class="pt-16 pb-8 bg-theme-dark relative z-30 overflow-hidden">
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-12 mb-12">
@@ -440,8 +409,8 @@
 
     <!-- =========================================================================
          SISTEM JAVASCRIPT UTAMA (OTAK WEBSITE)
-         Disusun rapi secara modular. (Fungsi renderBentoGrid dihapus karena
-         sudah menggunakan Liquid Jekyll di bagian HTML atas).
+         Disusun rapi secara modular. Khusus pada halaman ini, terdapat fungsi 
+         'renderBentoGrid' yang kini telah berisi 6 data destinasi.
          ========================================================================= -->
     <script>
         // Memastikan semua skrip berjalan HANYA SETELAH seluruh elemen HTML selesai dimuat
@@ -581,9 +550,100 @@
                 elemenDiperhatikan.forEach(el => pengamat.observe(el)); 
             };
 
+            // --- FUNGSI 7: Menyuntikkan 6 Data Destinasi ke dalam Wadah Bento Grid ---
+            const renderBentoGrid = () => {
+                // =================================================================
+                // DATA KATALOG DESTINASI
+                // Properti styleGrid menentukan seberapa besar gambar akan direntangkan 
+                // di layar laptop (md). Pola yang digunakan adalah 4 kolom.
+                // =================================================================
+                const posts = [
+                    { 
+                        judul: "Mandalika Area", 
+                        gambarGrid: "https://permatalomboktransport.github.io/assets/images/hero.png", 
+                        url: "/mandalika-area", 
+                        styleGrid: "md:col-span-2 md:row-span-2" // Sangat besar: Makan 2 kolom & 2 baris (Kiri Atas)
+                    },
+                    { 
+                        judul: "Pantai Lombok", 
+                        gambarGrid: "https://permatalomboktransport.github.io/assets/images/pantai.jpg", 
+                        url: "/pantai-lombok", 
+                        styleGrid: "md:col-span-2 md:row-span-1" // Melebar: Makan 2 kolom & 1 baris (Kanan Atas)
+                    },
+                    { 
+                        judul: "Air Terjun", 
+                        gambarGrid: "https://permatalomboktransport.github.io/assets/images/terjun.jpg", 
+                        url: "/air-terjun", 
+                        styleGrid: "md:col-span-1 md:row-span-1" // Standar: Makan 1 kolom & 1 baris (Tengah Kanan)
+                    },
+                    { 
+                        judul: "Gili Utara", 
+                        gambarGrid: "https://permatalomboktransport.github.io/assets/images/utara.jpg", 
+                        url: "/gili-utara", 
+                        styleGrid: "md:col-span-1 md:row-span-1" // Standar: Makan 1 kolom & 1 baris (Tengah Kanan Ujung)
+                    },
+                    { 
+                        judul: "Gili Timur", 
+                        gambarGrid: "https://permatalomboktransport.github.io/assets/images/timur.jpg", 
+                        url: "/gili-timur", 
+                        styleGrid: "md:col-span-2 md:row-span-1" // Melebar: Makan 2 kolom & 1 baris (Kiri Bawah)
+                    },
+                    { 
+                        judul: "Gili Barat", 
+                        gambarGrid: "https://permatalomboktransport.github.io/assets/images/barat.jpg", 
+                        url: "/gili-barat", 
+                        styleGrid: "md:col-span-2 md:row-span-1" // Melebar: Makan 2 kolom & 1 baris (Kanan Bawah)
+                    }
+                ]; 
+
+                const gridContainer = document.getElementById('bento-grid');
+
+                // Memastikan data post tidak kosong
+                if (posts.length > 0 && gridContainer) {
+                    
+                    // Mengolah setiap baris data menjadi kode HTML
+                    posts.forEach((post, index) => {
+                        // Membuat jeda animasi (delay) agar gambar muncul berurutan (gelombang)
+                        const delay = (index % 6) * 100; 
+                        
+                        // Template HTML untuk 1 buah kotak gambar destinasi
+                        const cardHTML = `
+                            <a href="${post.url}" class="reveal-zoom relative block rounded-3xl overflow-hidden shadow-md group ${post.styleGrid} cursor-pointer border border-theme-text-dark/5 dark:border-theme-light/5" style="transition-delay: ${delay}ms;">
+                                <!-- Gambar Utama -->
+                                <img src="${post.gambarGrid}" alt="${post.judul}" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110">
+                                
+                                <!-- Filter Gelap Bergradasi (Mulai terlihat saat disorot kursor) -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-theme-dark/90 via-theme-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                
+                                <!-- Area Teks Judul & Ikon Panah -->
+                                <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                                    <span class="text-theme-yellow-light text-xs md:text-sm font-bold tracking-widest uppercase mb-2 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-100">Jelajahi <i data-lucide="arrow-right" class="inline w-3 h-3 md:w-4 md:h-4"></i></span>
+                                    <h3 class="text-theme-light font-display text-xl md:text-2xl lg:text-3xl opacity-90 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 uppercase tracking-widest drop-shadow-md">${post.judul}</h3>
+                                </div>
+                            </a>
+                        `;
+                        // Suntikkan ke dalam wadah HTML
+                        gridContainer.innerHTML += cardHTML;
+                    });
+
+                // LOGIKA CADANGAN: Jika suatu hari data posts dikosongkan, tampilkan Ikon Folder Kosong (404)
+                } else if (gridContainer) {
+                    gridContainer.classList.remove('grid', 'grid-cols-1', 'sm:grid-cols-2', 'md:grid-cols-4', 'auto-rows-[250px]', 'sm:auto-rows-[250px]', 'md:auto-rows-[300px]');
+                    gridContainer.innerHTML = `
+                        <div class="flex flex-col items-center justify-center py-20 text-center reveal-up">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-theme-text-dark/20 dark:text-theme-light/20 mb-6 animate-bounce-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                            <h3 class="text-5xl md:text-7xl font-display text-theme-text-dark/40 dark:text-theme-light/40 mb-2 uppercase tracking-wide">404</h3>
+                        </div>
+                    `;
+                }
+            };
+
             // --- Menyalakan Mesin: Menjalankan semua fungsi secara berurutan ---
             inisialisasiIkon();
             aturModeTema();
+            renderBentoGrid(); // Menjalankan penyuntikan ke 6 data kartu di atas
             kelolaPreloader();
             efekHeaderScroll();
             kelolaMenuMobile();
