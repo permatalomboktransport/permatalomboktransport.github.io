@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Halaman Beranda (Paling Penting) -->
+  <url>
+    <loc>https://permatalomboktransport.com/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Halaman Layanan (Penting untuk Penjualan) -->
+  <url>
+    <loc>https://permatalomboktransport.com/layanan</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Halaman Destinasi (Penting untuk Pencarian Wisatawan) -->
+  <url>
+    <loc>https://permatalomboktransport.com/destinasi</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Halaman Tentang Kami (Penting untuk Kepercayaan) -->
+  <url>
+    <loc>https://permatalomboktransport.com/tentang</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
