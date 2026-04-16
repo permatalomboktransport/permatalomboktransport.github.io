@@ -1,53 +1,60 @@
 <!DOCTYPE html>
-<!-- Pengaturan bahasa (ID) dan efek gulir halus -->
+<!-- Pengaturan bahasa (ID) dan efek scroll halus -->
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- === BAGIAN 1: SEO & IDENTITAS HALAMAN === -->
-    <title>Mandalika Area - Sahabat Traveling Lombok Anda</title>
+    <title>Mandalika Area - Rilis Destinasi Permata Lombok</title>
     
-    <meta name="description" content="Membedah Keajaiban 9 Wisata Terbaik di Area Mandalika. Temukan harmoni sempurna antara kemegahan infrastruktur modern dan keasrian alam Lombok Selatan.">
-    <meta name="keywords" content="Mandalika, Wisata Mandalika, Kuta Mandalika, Bukit Merese, Pantai Gerupuk, Tanjung Aan, Sirkuit Mandalika, Permata Lombok Transport">
+    <meta name="description" content="Membedah keajaiban 9 wisata terbaik di Area Mandalika dalam balutan atmosfer liburan yang mengalir dan asik bersama Permata Lombok Transport.">
+    <meta name="keywords" content="Mandalika, Wisata Mandalika, Sirkuit Mandalika, Kuta Lombok, Bukit Merese, Pantai Gerupuk, Permata Lombok Transport, Travel Mandalika">
     <meta name="author" content="Permata Lombok Transport">
     <meta name="robots" content="index, follow"> 
     <link rel="canonical" href="/mandalika-area">
 
-    <!-- Ikon Tab Browser -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
 
-    <!-- Verifikasi Google Search Console -->
-    <meta name="google-site-verification" content="83AS5_jZkny6En-OQhhZUcU_-G6zbOyG0CDFTT-cGGA" />
-
-    <!-- Open Graph (Pratinjau Sosmed & WhatsApp) -->
+    <!-- Open Graph (Preview WhatsApp/Facebook) -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="/mandalika-area">
-    <meta property="og:title" content="Mandalika Area - Keajaiban 9 Wisata Terbaik">
-    <meta property="og:description" content="Era baru penjelajahan tropis di jantung Lombok Selatan bersama Permata Lombok Transport.">
-    <meta property="og:image" content="assets/images/hero.png">
+    <meta property="og:title" content="Rilis Destinasi: Keajaiban 9 Wisata Mandalika">
+    <meta property="og:description" content="Membedah keajaiban 9 wisata terbaik di Area Mandalika dalam balutan atmosfer liburan yang mengalir dan asik.">
+    <meta property="og:image" content="https://permatalomboktransport.github.io/assets/images/hero.png">
     <meta property="og:site_name" content="Permata Lombok Transport">
 
-    <!-- Schema.org untuk Bisnis Travel -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rilis Destinasi: Keajaiban 9 Wisata Mandalika">
+    <meta name="twitter:description" content="Membedah keajaiban wisata terbaik di Area Mandalika.">
+    <meta name="twitter:image" content="https://permatalomboktransport.github.io/assets/images/hero.png">
+
+    <!-- Schema.org (Data Artikel/Blog) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TravelAgency",
-      "name": "Permata Lombok Transport",
-      "image": "assets/images/logo.jpeg",
-      "description": "Layanan transportasi dan wisata premium di Lombok, Nusa Tenggara Barat.",
-      "url": "https://permatalomboktransport.github.io",
-      "telephone": "+6282341403159",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jl. Bypass Bandara Internasional Lombok",
-        "addressLocality": "Batujai, Kabupaten Lombok Tengah",
-        "addressRegion": "Nusa Tenggara Barat",
-        "postalCode": "83572",
-        "addressCountry": "ID"
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://permatalomboktransport.com/mandalika-area"
       },
-      "priceRange": "$$"
+      "headline": "Membedah Keajaiban 9 Wisata Terbaik di Area Mandalika",
+      "image": "https://permatalomboktransport.github.io/assets/images/hero.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Permata Lombok Transport"
+      },
+      "publisher": {
+        "@type": "TravelAgency",
+        "name": "Permata Lombok Transport",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://permatalomboktransport.github.io/assets/images/favicon.png"
+        }
+      }
     }
     </script>
 
@@ -55,10 +62,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- === BAGIAN 3: KONFIGURASI TEMA (TAILWIND CSS) === -->
+    <!-- === BAGIAN 3: KONFIGURASI TAILWIND CSS === -->
     <script>
         tailwind.config = {
-            darkMode: 'class', 
+            darkMode: 'class', // Mode gelap manual
             theme: {
                 extend: {
                     fontFamily: {
@@ -112,19 +119,16 @@
 
     <!-- === BAGIAN 4: KUSTOMISASI CSS MANUAL === -->
     <style>
+        /* Impor Font */
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600;800&display=swap');
 
-        /* Rendering teks dasar */
+        /* Rendering teks */
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            font-weight: 600;
+            font-weight: 400; /* Font dasar untuk artikel disesuaikan jadi reguler */
         }
-        
-        p { font-weight: 400; }
-
-        /* Font khusus judul */
-        h1, h2, h3, h4, h5, h6, .font-display {
+        h1, h2, h3, h4, h5, h6, .font-display, font-bold {
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
         }
@@ -135,7 +139,7 @@
         #hero-text-content { opacity: 0; transform: translateY(50px); transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
         #hero-text-content.show { opacity: 1; transform: translateY(0); }
 
-        /* Scroll Reveal (Animasi Muncul Dinamis) */
+        /* Animasi Scroll Reveal */
         .reveal-up { opacity: 0; transform: translateY(50px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-up.is-visible { opacity: 1; transform: translateY(0); }
         .reveal-down { opacity: 0; transform: translateY(-50px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -150,17 +154,17 @@
         .reveal-blur.is-visible { opacity: 1; filter: blur(0); transform: translateY(0); }
 
         /* Kustomisasi Scrollbar */
-        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #ffffff; }
         .dark ::-webkit-scrollbar-track { background: #0a1128; }
-        ::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: #2563EB; }
         .dark ::-webkit-scrollbar-thumb { background: #1D4ED8; }
         ::-webkit-scrollbar-thumb:hover { background: #FACC15; }
         .dark ::-webkit-scrollbar-thumb:hover { background: #EAB308; }
 
-        /* Menyembunyikan bilah gulir pada tabel responsif */
-        .hide-scroll::-webkit-scrollbar { display: none; }
-        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        /* Kustomisasi Paragraf Artikel */
+        .prose-custom p { margin-bottom: 1.5rem; line-height: 1.8; }
+        .prose-custom strong { font-weight: 700; color: inherit; }
     </style>
 </head>
 
@@ -181,7 +185,6 @@
     <header id="main-header" class="fixed w-full z-50 transition-all duration-300 top-0 px-0">
         <div id="header-inner" class="mx-auto px-6 py-6 transition-all duration-300 bg-transparent flex justify-between items-center">
             
-            <!-- Logo -->
             <div class="relative z-50 block reveal-zoom cursor-default">
                 <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
                      alt="Logo Permata Lombok Transport" 
@@ -189,7 +192,6 @@
                      onerror="this.style.display='none';">
             </div>
 
-            <!-- Tombol Aksi (Tema & Menu Mobile) -->
             <div class="flex items-center gap-4 md:gap-6 relative z-50 reveal-left">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors">
                     <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 md:w-7 md:h-7 hidden"></i>
@@ -205,7 +207,6 @@
             </div>
         </div>
 
-        <!-- Dropdown Menu Mobile -->
         <div id="mobile-dropdown" class="fixed inset-0 z-[60] bg-theme-light dark:bg-theme-dark transition-all duration-500 opacity-0 pointer-events-none flex flex-col items-center justify-center">
             <button id="close-mobile-menu" aria-label="Close Menu" class="absolute top-6 right-6 md:top-8 md:right-12 p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors flex items-center justify-center">
                 <i data-lucide="x" class="w-10 h-10 md:w-12 md:h-12 hover:rotate-90 transition-transform duration-300"></i>
@@ -221,114 +222,328 @@
     </header>
 
     <!-- === HERO SECTION === -->
-    <section id="hero" class="relative h-[70vh] w-full flex items-center overflow-hidden bg-theme-dark">
-        <!-- Latar Belakang -->
+    <section id="hero" class="relative h-[60vh] w-full flex items-center overflow-hidden bg-theme-dark">
         <div class="absolute inset-0 z-0">
-            <div id="hero-bg-img" class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-[3s] ease-out scale-105" style="background-image: url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div id="hero-bg-img" class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-[3s] ease-out scale-105" style="background-image: url('https://permatalomboktransport.github.io/assets/images/hero.png');"></div>
         </div>
         
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 z-10 bg-gradient-to-t from-theme-light dark:from-theme-dark via-transparent to-transparent transition-colors duration-300"></div>
+        <div class="absolute inset-0 z-10 bg-gradient-to-t from-theme-light dark:from-theme-dark to-transparent transition-colors duration-300"></div>
 
-        <!-- Teks Utama -->
-        <div class="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col justify-end pb-20">
+        <div class="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col justify-end pb-12">
             <div id="hero-text-content" class="flex flex-col items-center text-center w-full">
-                <span class="text-theme-yellow-light dark:text-theme-yellow-dark text-sm sm:text-base md:text-xl tracking-widest uppercase mb-4 font-display">Panduan Blog Wisata</span>
+                <span class="text-theme-yellow-light dark:text-theme-yellow-dark text-sm sm:text-base md:text-xl tracking-widest uppercase mb-4 font-display">Rilis Destinasi</span>
                 <h1 class="text-[9vw] sm:text-5xl md:text-6xl lg:text-7xl text-theme-text-dark dark:text-theme-light flex flex-col leading-[1.1] tracking-tight">
-                    <span class="whitespace-nowrap drop-shadow-md">MANDALIKA</span>
-                    <span class="text-theme-blue-light dark:text-theme-blue-dark drop-shadow-md whitespace-nowrap">AREA</span>
+                    <span class="whitespace-nowrap drop-shadow-md">AREA MANDALIKA</span>
+                    <span class="text-theme-blue-light dark:text-theme-blue-dark drop-shadow-md text-2xl sm:text-4xl md:text-5xl mt-2 whitespace-nowrap">9 WISATA TERBAIK</span>
                 </h1>
             </div>
         </div>
     </section>
 
-    <!-- === KONTEN UTAMA: BLOG & BENTO GRID === -->
+    <!-- === KONTEN UTAMA: BLOG & ZIGZAG DESTINASI === -->
     <main class="relative z-30 pb-24 bg-theme-light dark:bg-theme-dark transition-colors duration-300">
         
-        <!-- Bagian Intro: Blog Paragraf Awal -->
-        <section class="py-12 md:py-16">
-            <div class="container mx-auto px-6 md:px-12 max-w-4xl text-center reveal-up">
-                <h2 class="text-2xl md:text-4xl font-display text-theme-text-dark dark:text-theme-light mb-6 uppercase tracking-tight">Era Baru Penjelajahan Tropis</h2>
-                <p class="text-base md:text-lg text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed mb-6 text-justify">
-                    Kawasan pesisir selatan Pulau Lombok kini bukan sekadar titik singgah biasa. Sejak diresmikan sebagai Kawasan Ekonomi Khusus (KEK) dan Destinasi Pariwisata Super Prioritas (DPSP), wilayah Mandalika telah bermetamorfosis menjadi sebuah ruang liburan yang menawarkan harmoni sempurna antara kemegahan infrastruktur modern dan keasrian alam yang merangkul hangat. 
+        <!-- PENGANTAR ARTIKEL (PRESS RELEASE) -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6 md:px-12 max-w-4xl prose-custom reveal-up text-justify">
+                <p class="text-xl md:text-2xl font-display text-theme-blue-light dark:text-theme-yellow-dark mb-6 text-center">
+                    "Membedah Keajaiban 9 Wisata Terbaik di Area Mandalika dalam Balutan Atmosfer Liburan yang Mengalir dan Asik"
                 </p>
-                <p class="text-base md:text-lg text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed text-justify">
-                    Berada di tengah lanskap tropis yang dihiasi bukit-bukit sabana bergelombang dan lautan sejernih kristal, pesona Mandalika menghadirkan getaran yang sangat asik, santai, dan mengalir. Tidak ada ketergesaan di sini; yang ada hanyalah aliran waktu yang dinikmati lewat seruputan kelapa muda di pinggir pantai, langkah kaki di atas pasir selembut sutra, dan senja magis yang mengusir segala penat. Berikut adalah 9 destinasi paling memukau di area ini:
+                <p>
+                    <strong>Era Baru Penjelajahan Tropis di Jantung Lombok Selatan.</strong> Kawasan pesisir selatan Pulau Lombok kini bukan sekadar titik singgah biasa dalam peta pariwisata Nusantara. Sejak diresmikan sebagai Kawasan Ekonomi Khusus (KEK) dan Destinasi Pariwisata Super Prioritas (DPSP), wilayah Mandalika telah bermetamorfosis menjadi sebuah ruang liburan yang menawarkan harmoni sempurna antara kemegahan infrastruktur modern dan keasrian alam yang merangkul hangat.
                 </p>
-            </div>
-        </section>
-
-        <!-- Bagian Galeri Destinasi: BENTO GRID dengan Efek Hover Deskripsi -->
-        <section class="py-6 md:py-10">
-            <div class="container mx-auto px-4 md:px-8 max-w-[1400px]">
-                <!-- Wadah Grid (Diisi oleh JavaScript) -->
-                <div id="blog-bento-grid" class="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] sm:auto-rows-[350px] gap-4 md:gap-6">
-                </div>
-            </div>
-        </section>
-
-        <!-- Bagian Tabel: Peta Panduan Logistik -->
-        <section class="py-16">
-            <div class="container mx-auto px-6 md:px-12 max-w-5xl reveal-up">
-                <div class="flex items-center justify-center gap-4 mb-8">
-                    <i data-lucide="map" class="w-8 h-8 text-theme-yellow-dark"></i>
-                    <h2 class="text-2xl md:text-3xl font-display text-theme-text-dark dark:text-theme-light uppercase">Peta Panduan Singkat</h2>
-                </div>
+                <p>
+                    Berada di tengah lanskap tropis yang dihiasi bukit-bukit sabana yang bergelombang dan lautan sejernih kristal, pesona Mandalika menghadirkan getaran yang sangat asik, santai, dan mengalir bagi siapa saja yang menginjakkan kaki di sana. Ini adalah tempat di mana deru mesin motor balap kelas dunia dari <em>Pertamina Mandalika International Circuit</em> berpadu dengan nyanyian ombak Samudra Hindia, menciptakan sebuah konsep gaya hidup wisata baru yang dikenal dengan sebutan <strong>"Holiday Race"</strong>.
+                </p>
                 
-                <div class="overflow-x-auto hide-scroll rounded-2xl shadow-xl border border-theme-text-dark/10 dark:border-theme-light/10">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-theme-blue-light text-theme-light text-sm md:text-base uppercase tracking-wider">
-                                <th class="p-4 md:p-6 font-display rounded-tl-2xl">Destinasi</th>
-                                <th class="p-4 md:p-6 font-display">Waktu Tempuh (Sirkuit)</th>
-                                <th class="p-4 md:p-6 font-display">Vibe & Aktivitas</th>
+                <h3 class="text-2xl font-display mt-10 mb-4 text-theme-text-dark dark:text-theme-light text-left">Mengurai Fenomena Ekonomi Liburan: Regulasi Santai yang Melindungi Pelancong</h3>
+                <p>
+                    Sebelum membenamkan diri dalam keindahan visual, pemahaman mengenai ekosistem pariwisata yang menaungi Mandalika memberikan wawasan berharga. Puncak keramaian Mandalika terjadi pada perhelatan ajang internasional seperti MotoGP. Namun, yang membuat Mandalika tetap asik dan santai adalah kehadiran tata kelola yang cerdas melalui <strong>Peraturan Gubernur (Pergub) NTB Nomor 9 Tahun 2022</strong> yang melindungi wisatawan dari lonjakan harga <em>(price gouging)</em>.
+                </p>
+
+                <!-- Tabel Zonasi Mandalika -->
+                <div class="overflow-x-auto my-8 rounded-2xl shadow-lg border border-theme-text-dark/10 dark:border-theme-light/10">
+                    <table class="w-full text-sm md:text-base text-left">
+                        <thead class="bg-theme-blue-light text-theme-light font-display">
+                            <tr>
+                                <th class="p-4">Zonasi Tata Kelola</th>
+                                <th class="p-4">Wilayah Cakupan</th>
+                                <th class="p-4">Batas Maksimal Kenaikan Tarif</th>
                             </tr>
                         </thead>
-                        <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-light dark:bg-[#070d1e] text-theme-text-dark dark:text-theme-light hover:bg-gray-50 dark:hover:bg-theme-dark transition-colors">
-                            <td class="p-4 md:p-6 font-bold">Pantai Kuta Mandalika</td>
-                            <td class="p-4 md:p-6 text-sm">~16 Menit (4,3 km)</td>
-                            <td class="p-4 md:p-6 text-sm">Nongkrong santai di kafe, paralayang, windsurfing.</td>
-                        </tr>
-                        <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-white dark:bg-[#0a1128] text-theme-text-dark dark:text-theme-light hover:bg-gray-50 dark:hover:bg-theme-dark transition-colors">
-                            <td class="p-4 md:p-6 font-bold">Bukit Merese</td>
-                            <td class="p-4 md:p-6 text-sm">~9 – 12 Menit</td>
-                            <td class="p-4 md:p-6 text-sm">Menyongsong senja, trekking riang pesisir.</td>
-                        </tr>
-                        <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-light dark:bg-[#070d1e] text-theme-text-dark dark:text-theme-light hover:bg-gray-50 dark:hover:bg-theme-dark transition-colors">
-                            <td class="p-4 md:p-6 font-bold">Pantai Tanjung Aan</td>
-                            <td class="p-4 md:p-6 text-sm">~7 Menit</td>
-                            <td class="p-4 md:p-6 text-sm">Mengambang santai, pijat pasir merica, swafoto.</td>
-                        </tr>
-                        <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-white dark:bg-[#0a1128] text-theme-text-dark dark:text-theme-light hover:bg-gray-50 dark:hover:bg-theme-dark transition-colors">
-                            <td class="p-4 md:p-6 font-bold">Bukit & Pantai Seger</td>
-                            <td class="p-4 md:p-6 text-sm">~5 Menit (Nempel Sirkuit)</td>
-                            <td class="p-4 md:p-6 text-sm">Berburu siluet MotoGP, meresapi legenda Sasak.</td>
-                        </tr>
-                        <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-light dark:bg-[#070d1e] text-theme-text-dark dark:text-theme-light hover:bg-gray-50 dark:hover:bg-theme-dark transition-colors">
-                            <td class="p-4 md:p-6 font-bold">Pantai Gerupuk</td>
-                            <td class="p-4 md:p-6 text-sm">~20 Menit</td>
-                            <td class="p-4 md:p-6 text-sm">Akrobatik ombak surfing, sewa perahu kayu.</td>
-                        </tr>
-                        <tr class="bg-white dark:bg-[#0a1128] text-theme-text-dark dark:text-theme-light hover:bg-gray-50 dark:hover:bg-theme-dark transition-colors">
-                            <td class="p-4 md:p-6 font-bold rounded-bl-2xl">Desa Adat Sade</td>
-                            <td class="p-4 md:p-6 text-sm">~15 Menit (10 km)</td>
-                            <td class="p-4 md:p-6 text-sm rounded-br-2xl">Dialog budaya, praktik menenun songket etnik.</td>
-                        </tr>
+                        <tbody class="bg-theme-light dark:bg-[#0a1128] text-theme-text-dark dark:text-theme-light">
+                            <tr class="border-b border-theme-text-dark/10 dark:border-theme-light/10 hover:bg-theme-text-dark/5 dark:hover:bg-theme-light/5 transition-colors">
+                                <td class="p-4 font-bold">Zona 1: Episentrum Utama</td>
+                                <td class="p-4">KEK Mandalika & Lombok Tengah</td>
+                                <td class="p-4 text-theme-yellow-dark font-bold">3x lipat standar</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/10 dark:border-theme-light/10 hover:bg-theme-text-dark/5 dark:hover:bg-theme-light/5 transition-colors">
+                                <td class="p-4 font-bold">Zona 2: Area Transit</td>
+                                <td class="p-4">Kota Mataram & Sekitarnya</td>
+                                <td class="p-4 text-theme-blue-light font-bold">2x lipat standar</td>
+                            </tr>
+                            <tr class="hover:bg-theme-text-dark/5 dark:hover:bg-theme-light/5 transition-colors">
+                                <td class="p-4 font-bold">Zona 3: Destinasi Satelit</td>
+                                <td class="p-4">Senggigi & Gili (Lombok Utara)</td>
+                                <td class="p-4 text-whatsapp font-bold">1x lipat standar</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
-        <!-- Bagian Penutup Blog: Budaya (Storynomics) -->
-        <section class="py-12 md:py-16">
-            <div class="container mx-auto px-6 md:px-12 max-w-4xl text-center reveal-up">
-                <i data-lucide="book-open" class="w-12 h-12 text-theme-blue-light mx-auto mb-6 opacity-80"></i>
-                <h2 class="text-2xl md:text-4xl font-display text-theme-text-dark dark:text-theme-light mb-6 uppercase tracking-tight">Storynomics Bau Nyale</h2>
-                <p class="text-base md:text-lg text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed mb-6 text-justify">
-                    Satu elemen krusial yang menjadikan atmosfer pariwisata di Mandalika mengalir penuh makna adalah akar budaya lokal yang dirawat sedemikian hangat. Legenda agung Putri Mandalika yang melompat ke pusaran ombak demi kedamaian, dan menjelma menjadi cacing laut berwarna-warni (nyale), terus dihidupkan melalui Festival Bau Nyale setiap tahunnya.
+        <!-- EKSPLORASI 9 DESTINASI ZIGZAG -->
+        <section class="py-12 bg-theme-light/50 dark:bg-[#070d1e] overflow-hidden">
+            <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+                <div class="text-center mb-16 reveal-up">
+                    <h2 class="text-3xl md:text-5xl font-display uppercase tracking-tight text-theme-text-dark dark:text-theme-light">
+                        Eksplorasi <span class="text-theme-blue-light dark:text-theme-yellow-dark">Mengalir</span>
+                    </h2>
+                    <p class="mt-4 text-theme-text-dark/70 dark:text-theme-light/70">9 Surga Terbaik di Jantung Mandalika</p>
+                </div>
+
+                <div class="space-y-20 md:space-y-32">
+                    
+                    <!-- 1. KUTA MANDALIKA (Gambar Kiri, Teks Kanan) -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-left">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pantai Kuta Mandalika" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">01</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-right prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Pantai Kuta Mandalika</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Kanvas Biru yang Panjang dan Menenangkan</p>
+                            <p class="text-sm md:text-base text-justify">Garis pantai melengkung nan luar biasa panjang mencapai 7,2 kilometer. Pasir putihnya memantulkan cahaya matahari tropis yang cerah, berpadu harmonis dengan perairan dangkal berwarna toska. Berbeda dengan Kuta Bali, kawasan ini menyajikan jiwa yang jauh lebih tenang, damai, dan mengundang untuk sekadar rebahan santai.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Desa Kuta, Pujut (16 Menit dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. BUKIT MERESE (Teks Kiri, Gambar Kanan) -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-right">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1559628233-100c798642d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bukit Merese" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">02</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-left prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Bukit Merese</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Takhta Eksotis untuk Para Penikmat Senja</p>
+                            <p class="text-sm md:text-base text-justify">Dikenal juga sebagai <em>Love Hills</em>, bukit ini menyajikan hamparan rumput sabana yang berpadu dengan luasnya Samudra Hindia. Keasyikan utamanya terletak pada kemampuannya memberikan ruang privat untuk menggelar kain pantai sembari menunggu atraksi matahari terbenam yang memukau.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Jalan Kuta Lombok (9 Menit dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. PANTAI TANJUNG AAN -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-left">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://permatalomboktransport.github.io/assets/images/pantai.jpg" alt="Pantai Tanjung Aan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62';">
+                                <div class="absolute top-4 left-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">03</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-right prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Pantai Tanjung Aan</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Misteri Pasir Merica di Pelukan Teluk Tenang</p>
+                            <p class="text-sm md:text-base text-justify">Berbeda dari tekstur pantai pada umumnya, kawasan ini dianugerahi bentangan pasir yang butirannya bulat menyerupai biji merica. Berjalan tanpa alas kaki di sini memberikan sensasi pijat refleksi alami. Bentuk teluknya meredam ombak, menjadikannya kolam raksasa yang sangat aman untuk berenang.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Desa Sengkol (7 Menit dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. BUKIT DAN PANTAI SEGER -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-right">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://permatalomboktransport.github.io/assets/images/hero.png" alt="Bukit Seger" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">04</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-left prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Bukit & Pantai Seger</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Perpaduan Romansa Legenda dan Pesona Balap Modern</p>
+                            <p class="text-sm md:text-base text-justify">Menawarkan kontras visual yang mencolok: luasnya Samudra Hindia berdampingan dengan lanskap ultra-modern Tikungan 10 Sirkuit Mandalika. Di sinilah jantung spiritual budaya Sasak berdetak, tempat legenda Putri Mandalika bernapas melalui monumen yang berdiri anggun di tepi pantai.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Desa Sukadana (5 Menit dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. PANTAI GERUPUK -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-left">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pantai Gerupuk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">05</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-right prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Pantai Gerupuk</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Arena Bermain Seru Bagi Para Penari Ombak</p>
+                            <p class="text-sm md:text-base text-justify">Destinasi selancar kelas dunia di mana ombak raksasanya pecah di tengah teluk. Menyewa perahu lokal menuju <em>line-up</em> ombak menjadi kultur yang komunal. Sekalipun Anda bukan peselancar, menikmati kopi di kedai pinggir pantai sambil melihat aksi mereka adalah bentuk terapi relaksasi luar biasa.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Kec. Pujut (~20 Menit dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. DESA ADAT SADE -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-right">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desa Adat Sade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">06</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-left prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Desa Adat Sade</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Lorong Waktu Menuju Kehangatan Budaya Sasak</p>
+                            <p class="text-sm md:text-base text-justify">Masyarakat penjaga gawang tradisi dengan rumah panggung beratap ijuk dan lantai yang dirawat menggunakan campuran kotoran kerbau yang ajaibnya tak berbau. Pengunjung diajak menyelami seni tenun songket dan memakai pakaian etnik untuk dokumentasi berkarakter.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Desa Rembitan (10 km dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. TWA GUNUNG TUNAK -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-left">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gunung Tunak" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">07</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-right prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">TWA Gunung Tunak & Sari Goang</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Harmoni Alam Liar yang Menakjubkan</p>
+                            <p class="text-sm md:text-base text-justify">Kawasan konservasi seluas 1.200 hektar yang menyajikan pemandangan alam paling dramatis. Dijuluki "Raja Ampat-nya Lombok", tebing kapurnya menjulang vertikal. Mengejar <em>sunrise</em> sambil mendengarkan deburan ombak memukul pulau karang berlubang adalah terapi relaksasi tiada tara.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Desa Mertak (Akses Hutan Lindung)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. DESA WISATA MERTAK -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-right">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desa Wisata Mertak Mangrove" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">08</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-left prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Desa Wisata Mertak</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Menyatu dalam Kedamaian Hutan Ekowisata</p>
+                            <p class="text-sm md:text-base text-justify">Gaya berlibur progresif berbasis ekowisata berkelanjutan. Menyewa kano menyusuri lorong sunyi di dalam rimbunnya kanopi hutan bakau tanpa suara bising mesin perahu. Meditasi alam terbuka yang menyegarkan paru-paru dengan udara pesisir bersih.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Desa Mertak (~15 Menit dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. PANTAI BATU BERANG -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                        <div class="w-full md:w-1/2 reveal-left">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pantai Batu Berang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-theme-yellow-light text-theme-text-dark font-display px-4 py-2 rounded-full text-sm">09</div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 reveal-right prose-custom">
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Pantai Batu Berang</h3>
+                            <p class="text-theme-blue-light font-bold mb-2">Harmoni Relaksasi di Muara Tersembunyi</p>
+                            <p class="text-sm md:text-base text-justify">Definisi sejati dari permata tersembunyi (<em>hidden gem</em>). Menyajikan kanvas transisi di mana pasir putih memudar menyatu dengan ketenangan air muara sungai. Suasana piknik <em>rustic</em> di bawah mangrove yang mengalir santun, jauh dari gempuran pariwisata massal.</p>
+                            <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-theme-yellow-dark"></i>
+                                <span>Dusun Serenang (6,7 km dari Sirkuit)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TABEL LOGISTIK & NAVIGASI -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6 md:px-12 max-w-5xl reveal-up">
+                <h3 class="text-2xl md:text-3xl font-display text-center mb-8 text-theme-text-dark dark:text-theme-light">Peta Panduan Logistik & Retribusi</h3>
+                <div class="overflow-x-auto rounded-2xl shadow-xl border border-theme-text-dark/10 dark:border-theme-light/10 bg-theme-light dark:bg-[#070d1e]">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-theme-yellow-light text-theme-text-dark font-display uppercase tracking-wider text-xs">
+                            <tr>
+                                <th class="p-4">Destinasi</th>
+                                <th class="p-4">Estimasi Akses</th>
+                                <th class="p-4">Tiket Masuk</th>
+                                <th class="p-4">Biaya Parkir</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-theme-text-dark dark:text-theme-light">
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Kuta Mandalika</td><td class="p-4">16 Menit (4,3 km)</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Bukit Merese</td><td class="p-4">9 - 12 Menit</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Tanjung Aan</td><td class="p-4">7 Menit</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Bukit Seger</td><td class="p-4">5 Menit (Samping Sirkuit)</td><td class="p-4">Donasi Bebas</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Pantai Gerupuk</td><td class="p-4">20 Menit</td><td class="p-4">Gratis</td><td class="p-4">Retribusi Desa</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Desa Adat Sade</td><td class="p-4">15 Menit (10 km)</td><td class="p-4">Donasi Bebas</td><td class="p-4">Terpusat</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Gunung Tunak</td><td class="p-4">Akses Konservasi</td><td class="p-4">Rp5.000 - Rp7.500</td><td class="p-4">Terintegrasi</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Desa Mertak</td><td class="p-4">15 Menit</td><td class="p-4">Via Paket Ekowisata</td><td class="p-4">Terintegrasi</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Pantai Batu Berang</td><td class="p-4">15 Menit (6,7 km)</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORYNOMICS & PENUTUP -->
+        <section class="py-12">
+            <div class="container mx-auto px-6 md:px-12 max-w-4xl prose-custom reveal-blur text-justify">
+                <div class="bg-theme-yellow-light/10 dark:bg-theme-blue-dark/20 p-8 rounded-3xl border-l-4 border-theme-yellow-dark mb-10 shadow-md">
+                    <h3 class="text-2xl font-display text-theme-text-dark dark:text-theme-light mb-3">Storynomics Bau Nyale: Merawat Jiwa dalam Denyut Pembangunan</h3>
+                    <p class="text-theme-text-dark/80 dark:text-theme-light/80 italic">
+                        "Kawasan ini merupakan laboratorium hidup bagi konsep storynomics tourism, di mana legenda Putri Mandalika dikapitalisasi elegan untuk menciptakan identitas tanpa merusak sakralitasnya. Cacing laut warna-warni (Nyale) yang muncul setiap tanggal 20 bulan 10 Sasak dipercaya sebagai penjelmaan sang putri. Penyatuan narasi etos perdamaian masa lalu dan sirkuit balap yang memacu adrenalin ini menyuguhkan pengalaman berlibur yang puitis."
+                    </p>
+                </div>
+                
+                <h3 class="text-2xl font-display text-theme-text-dark dark:text-theme-light mb-4">Refleksi Penutup: Mandalika Sebagai Eskapisme Berkualitas</h3>
+                <p>
+                    Mandalika berhasil memadukan deru mesin berkecepatan tinggi dengan kemurahan hati alam yang mempesona. Mulai dari menunggangi ombak beringas, menyendiri di ekowisata mangrove, hingga mengagumi rumah bambu kuno; semuanya menyumbang nada dalam melodi liburan yang harmonis.
                 </p>
-                <p class="text-base md:text-lg text-theme-text-dark/80 dark:text-theme-light/80 leading-relaxed text-justify">
-                    Penyatuan narasi antara etos perdamaian Putri Mandalika dan sirkuit balap yang saling memacu adrenalin ini menyuguhkan pengalaman berlibur yang puitis. Pelancong diajak menyadari bahwa mereka berpijak di atas tanah yang menghargai pengorbanan masa lalu. Siapkan kacamata hitam, baju pantai yang nyaman, dan biarkan semesta pesisir selatan Lombok menceritakan kisahnya kepada Anda.
+                <p>
+                    Bagi setiap pencari kebebasan, Mandalika menawarkan pelarian liburan yang jauh dari kata kaku. Cukup bermodalkan setelan kacamata hitam, baju pantai yang nyaman, dan jiwa terbuka; sisanya biarkan semesta pesisir selatan Lombok yang merangkul Anda. Selamat merencanakan perjalanan asik ke kawasan super prioritas yang hangat dan menenangkan ini bersama <strong>Permata Lombok Transport</strong>.
                 </p>
             </div>
         </section>
@@ -339,8 +554,6 @@
     <footer class="pt-16 pb-8 bg-theme-dark relative z-30 overflow-hidden">
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-12 mb-12">
-                
-                <!-- Info Perusahaan -->
                 <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left reveal-up">
                     <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" alt="Logo Permata Lombok Transport" class="w-12 h-12 md:w-14 md:h-14 mb-4 drop-shadow-md">
                     <h2 class="text-base sm:text-lg md:text-xl font-display tracking-tight leading-tight mb-2">
@@ -353,7 +566,6 @@
                     </p>
                 </div>
                 
-                <!-- Info Alamat -->
                 <div class="w-full md:w-1/2 reveal-up flex flex-col items-center md:items-start text-center md:text-left" style="transition-delay: 200ms;">
                     <a href="https://maps.app.goo.gl/ZNTKW7zprXFkHNt89" target="_blank" rel="noreferrer" class="group flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 rounded-xl hover:bg-theme-light/5 transition-colors duration-300">
                         <div class="bg-theme-blue-light/20 p-3 rounded-full text-theme-yellow-light group-hover:scale-110 group-hover:bg-theme-blue-light/40 transition-all shrink-0">
@@ -369,12 +581,10 @@
                 </div>
             </div>
 
-            <!-- Hak Cipta & Sosial Media -->
             <div class="border-t border-theme-light/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 reveal-blur" style="transition-delay: 300ms;">
                 <p class="text-theme-light/70 text-xs sm:text-sm font-sans font-medium text-center md:text-left">
                     &copy; 2026 Permata Lombok Transport.
                 </p>
-                
                 <div class="flex items-center gap-6 text-theme-light/70">
                     <a href="https://facebook.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Facebook" class="hover:text-theme-blue-light transition-colors hover:-translate-y-1 transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.7 226.4 209.3 245V327.7h-63V256h63v-54.6c0-62.2 37-96.5 93.7-96.5 27.1 0 55.5 4.8 55.5 4.8v61h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h68.8l-11 71.7h-57.8V501C413.3 482.4 504 379.8 504 256z"/></svg>
@@ -402,10 +612,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. Render Ikon Lucide
             const initIcons = () => lucide.createIcons();
 
-            // 2. Mode Gelap/Terang
             const initTheme = () => {
                 const btn = document.getElementById('theme-toggle');
                 const darkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -432,11 +640,10 @@
                 });
             };
 
-            // 3. Animasi Pemuatan Awal (Preloader)
             const initPreloader = () => {
                 const heroImage = new Promise(resolve => {
                     const img = new Image();
-                    img.src = 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+                    img.src = 'https://permatalomboktransport.github.io/assets/images/hero.png';
                     img.onload = resolve;
                     img.onerror = resolve; 
                 });
@@ -464,7 +671,6 @@
                 });
             };
 
-            // 4. Efek Header Saat Digulir
             const initHeaderScroll = () => {
                 const headerInner = document.getElementById('header-inner');
                 window.addEventListener('scroll', () => {
@@ -478,7 +684,6 @@
                 });
             };
 
-            // 5. Menu Layar Penuh (Mobile)
             const initMobileMenu = () => {
                 const dropdown = document.getElementById('mobile-dropdown');
                 const btnOpen = document.getElementById('mobile-menu-btn');
@@ -502,7 +707,6 @@
                 if (btnClose) btnClose.addEventListener('click', toggleMenu);
             };
 
-            // 6. Animasi Tampil (Scroll Reveal)
             const initScrollReveal = () => {
                 const observerOptions = { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.1 };
                 const observer = new IntersectionObserver((entries, observer) => {
@@ -518,120 +722,8 @@
                 targets.forEach(el => observer.observe(el)); 
             };
 
-            // 7. Memuat Data Grid Blog Destinasi & Efek Teks 'Slide-Up'
-            const renderBlogGrid = () => {
-                // Daftar 9 Wisata berdasarkan dokumen teks
-                const destinasiLombok = [
-                    { 
-                        judul: "Pantai Kuta Mandalika", 
-                        lokasi: "Kuta, Pujut", 
-                        deskripsi: "Garis pantai melengkung 7,2 km berpasir putih dan perairan toska. Titik pusat gaya hidup santai dengan deretan kafe berdesain tropis-modern.", 
-                        gambar: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-                        gridSpan: "md:col-span-2 md:row-span-2" 
-                    },
-                    { 
-                        judul: "Bukit Merese", 
-                        lokasi: "Kuta, Pujut", 
-                        deskripsi: "Takhta eksotis para penikmat senja dengan hamparan rumput sabana luas yang menjorok indah ke Samudra Hindia.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/hero.png", 
-                        gridSpan: "md:col-span-1 md:row-span-1" 
-                    },
-                    { 
-                        judul: "Pantai Tanjung Aan", 
-                        lokasi: "Sengkol, Kuta", 
-                        deskripsi: "Misteri hamparan pasir berbentuk biji merica kuning di dalam pelukan teluk tenang bagaikan tapal kuda pelindung.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/pantai.jpg", 
-                        gridSpan: "md:col-span-1 md:row-span-1" 
-                    },
-                    { 
-                        judul: "Bukit & Pantai Seger", 
-                        lokasi: "Sukadana, Pujut", 
-                        deskripsi: "Kontras visual epik antara luasnya lautan, pesona balap modern sirkuit Mandalika, dan monumen saksi bisu legenda Putri Mandalika.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/mandalika.jpg", 
-                        gridSpan: "md:col-span-2 md:row-span-1" 
-                    },
-                    { 
-                        judul: "Pantai Gerupuk", 
-                        lokasi: "Pujut, Lombok Tengah", 
-                        deskripsi: "Arena bermain asik para penari ombak. Dikenal memiliki gelombang besar bertenaga tinggi yang sangat digemari surfer dunia.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/timur.jpg", 
-                        gridSpan: "md:col-span-1 md:row-span-2" 
-                    },
-                    { 
-                        judul: "Desa Adat Sade", 
-                        lokasi: "Rembitan, Pujut", 
-                        deskripsi: "Lorong waktu magis menuju kehangatan budaya Sasak, tradisi lantai tanah liat, dan pengerajin tenun songket yang estetik.", 
-                        gambar: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-                        gridSpan: "md:col-span-1 md:row-span-1" 
-                    },
-                    { 
-                        judul: "TWA Gunung Tunak", 
-                        lokasi: "Mertak, Pujut", 
-                        deskripsi: "Raja Ampat-nya Lombok. Dihiasi tebing kapur putih gading dan sebuah pulau karang berlubang dengan hempasan ombak yang epik.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/utara.jpg", 
-                        gridSpan: "md:col-span-1 md:row-span-1" 
-                    },
-                    { 
-                        judul: "Desa Wisata Mertak", 
-                        lokasi: "Mertak, Pujut", 
-                        deskripsi: "Menyatu dalam kedamaian ekowisata berkelanjutan dengan rimbunnya hutan mangrove serta aktivitas kano pesisir santai.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/barat.jpg", 
-                        gridSpan: "md:col-span-2 md:row-span-1" 
-                    },
-                    { 
-                        judul: "Pantai Batu Berang", 
-                        lokasi: "Dusun Serenang", 
-                        deskripsi: "Piknik bernuansa harmoni relaksasi di tepi muara tenang nan perawan yang tersembunyi dari gempuran wisata massal.", 
-                        gambar: "https://permatalomboktransport.github.io/assets/images/terjun.jpg", 
-                        gridSpan: "md:col-span-1 md:row-span-1" 
-                    }
-                ]; 
-
-                const gridContainer = document.getElementById('blog-bento-grid');
-
-                if (destinasiLombok.length > 0 && gridContainer) {
-                    let htmlContent = '';
-                    destinasiLombok.forEach((post, index) => {
-                        const delay = (index % 6) * 100; 
-                        
-                        htmlContent += `
-                            <div class="reveal-zoom relative block rounded-3xl overflow-hidden shadow-xl group ${post.gridSpan} border border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-dark cursor-pointer" style="transition-delay: ${delay}ms;">
-                                
-                                <!-- Foto Latar Belakang -->
-                                <img src="${post.gambar}" alt="${post.judul}" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110">
-                                
-                                <!-- Gradasi Hitam (Lebih gelap saat disorot/hover) -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a1128] via-[#0a1128]/50 to-transparent opacity-70 group-hover:opacity-95 transition-opacity duration-500"></div>
-                                
-                                <!-- Konten Teks melayang dengan efek Slide-Up -->
-                                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
-                                    <div class="translate-y-12 md:translate-y-16 group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                                        <!-- Judul -->
-                                        <h3 class="text-theme-light font-display text-xl md:text-2xl lg:text-3xl uppercase tracking-widest drop-shadow-md mb-1">${post.judul}</h3>
-                                        
-                                        <!-- Lokasi -->
-                                        <p class="text-theme-yellow-light text-xs md:text-sm font-bold tracking-widest uppercase mb-4 flex items-center gap-1">
-                                            <i data-lucide="map-pin" class="w-3 h-3 md:w-4 md:h-4"></i> ${post.lokasi}
-                                        </p>
-                                        
-                                        <!-- Paragraf Blog (Muncul Perlahan) -->
-                                        <p class="text-theme-light/90 text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3 md:line-clamp-none">
-                                            ${post.deskripsi}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    });
-                    gridContainer.innerHTML = htmlContent;
-                    initIcons(); // Me-render ulang ikon Lucide di dalam kartu yang baru disuntikkan
-                }
-            };
-
-            // Menjalankan semua tahapan
             initIcons();
             initTheme();
-            renderBlogGrid(); 
             initPreloader();
             initHeaderScroll();
             initMobileMenu();
