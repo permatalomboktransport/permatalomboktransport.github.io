@@ -185,6 +185,7 @@
     <header id="main-header" class="fixed w-full z-50 transition-all duration-300 top-0 px-0">
         <div id="header-inner" class="mx-auto px-6 py-6 transition-all duration-300 bg-transparent flex justify-between items-center">
             
+            <!-- Logo -->
             <div class="relative z-50 block reveal-zoom cursor-default">
                 <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
                      alt="Logo Permata Lombok Transport" 
@@ -192,6 +193,7 @@
                      onerror="this.style.display='none';">
             </div>
 
+            <!-- Tombol Aksi (Tema & Menu Mobile) -->
             <div class="flex items-center gap-4 md:gap-6 relative z-50 reveal-left">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors">
                     <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 md:w-7 md:h-7 hidden"></i>
@@ -207,6 +209,7 @@
             </div>
         </div>
 
+        <!-- Dropdown Menu Mobile -->
         <div id="mobile-dropdown" class="fixed inset-0 z-[60] bg-theme-light dark:bg-theme-dark transition-all duration-500 opacity-0 pointer-events-none flex flex-col items-center justify-center">
             <button id="close-mobile-menu" aria-label="Close Menu" class="absolute top-6 right-6 md:top-8 md:right-12 p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors flex items-center justify-center">
                 <i data-lucide="x" class="w-10 h-10 md:w-12 md:h-12 hover:rotate-90 transition-transform duration-300"></i>
@@ -223,24 +226,92 @@
 
     <!-- === HERO SECTION === -->
     <section id="hero" class="relative h-[60vh] w-full flex items-center overflow-hidden bg-theme-dark">
+        <!-- Latar Belakang -->
         <div class="absolute inset-0 z-0">
             <div id="hero-bg-img" class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-[3s] ease-out scale-105" style="background-image: url('https://permatalomboktransport.github.io/assets/images/hero.png');"></div>
         </div>
+        
+        <!-- Gradient Overlay -->
         <div class="absolute inset-0 z-10 bg-gradient-to-t from-theme-light dark:from-theme-dark to-transparent transition-colors duration-300"></div>
+
+        <!-- Teks Utama -->
+        <div class="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col justify-end pb-12">
+            <div id="hero-text-content" class="flex flex-col items-center text-center w-full">
+                <span class="text-theme-yellow-light dark:text-theme-yellow-dark text-sm sm:text-base md:text-xl tracking-widest uppercase mb-4 font-display">Rilis Destinasi</span>
+                <h1 class="text-[9vw] sm:text-5xl md:text-6xl lg:text-7xl text-theme-text-dark dark:text-theme-light flex flex-col leading-[1.1] tracking-tight">
+                    <span class="whitespace-nowrap drop-shadow-md">AREA MANDALIKA</span>
+                    <span class="text-theme-blue-light dark:text-theme-blue-dark drop-shadow-md text-2xl sm:text-4xl md:text-5xl mt-2 whitespace-nowrap">9 WISATA TERBAIK</span>
+                </h1>
+            </div>
+        </div>
     </section>
 
-        <!-- EKSPLORASI DESTINASI ZIGZAG -->
+    <!-- === KONTEN UTAMA: BLOG & ZIGZAG DESTINASI === -->
+    <main class="relative z-30 pb-0 bg-theme-light dark:bg-theme-dark transition-colors duration-300">
+        
+        <!-- PENGANTAR ARTIKEL (PRESS RELEASE) -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6 md:px-12 max-w-4xl prose-custom reveal-up text-justify">
+                <p class="text-xl md:text-2xl font-display text-theme-blue-light dark:text-theme-yellow-dark mb-6 text-center">
+                    "Membedah Keajaiban 9 Wisata Terbaik di Area Mandalika dalam Balutan Atmosfer Liburan yang Mengalir dan Asik"
+                </p>
+                <p>
+                    <strong>Era Baru Penjelajahan Tropis di Jantung Lombok Selatan.</strong> Kawasan pesisir selatan Pulau Lombok kini bukan sekadar titik singgah biasa dalam peta pariwisata Nusantara. Sejak diresmikan sebagai Kawasan Ekonomi Khusus (KEK) dan Destinasi Pariwisata Super Prioritas (DPSP), wilayah Mandalika telah bermetamorfosis menjadi sebuah ruang liburan yang menawarkan harmoni sempurna antara kemegahan infrastruktur modern dan keasrian alam yang merangkul hangat.
+                </p>
+                <p>
+                    Berada di tengah lanskap tropis yang dihiasi bukit-bukit sabana yang bergelombang dan lautan sejernih kristal, pesona Mandalika menghadirkan getaran yang sangat asik, santai, dan mengalir bagi siapa saja yang menginjakkan kaki di sana. Ini adalah tempat di mana deru mesin motor balap kelas dunia dari <em>Pertamina Mandalika International Circuit</em> berpadu dengan nyanyian ombak Samudra Hindia, menciptakan sebuah konsep gaya hidup wisata baru yang dikenal dengan sebutan <strong>"Holiday Race"</strong>.
+                </p>
+                
+                <h3 class="text-2xl font-display mt-10 mb-4 text-theme-text-dark dark:text-theme-light text-left">Mengurai Fenomena Ekonomi Liburan: Regulasi Santai yang Melindungi Pelancong</h3>
+                <p>
+                    Sebelum membenamkan diri dalam keindahan visual, pemahaman mengenai ekosistem pariwisata yang menaungi Mandalika memberikan wawasan berharga. Puncak keramaian Mandalika terjadi pada perhelatan ajang internasional seperti MotoGP. Namun, yang membuat Mandalika tetap asik dan santai adalah kehadiran tata kelola yang cerdas melalui <strong>Peraturan Gubernur (Pergub) NTB Nomor 9 Tahun 2022</strong> yang melindungi wisatawan dari lonjakan harga <em>(price gouging)</em>.
+                </p>
+
+                <!-- Tabel Zonasi Mandalika -->
+                <div class="overflow-x-auto my-8 rounded-2xl shadow-lg border border-theme-text-dark/10 dark:border-theme-light/10">
+                    <table class="w-full text-sm md:text-base text-left">
+                        <thead class="bg-theme-blue-light text-theme-light font-display">
+                            <tr>
+                                <th class="p-4">Zonasi Tata Kelola</th>
+                                <th class="p-4">Wilayah Cakupan</th>
+                                <th class="p-4">Batas Maksimal Kenaikan Tarif</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-theme-light dark:bg-[#0a1128] text-theme-text-dark dark:text-theme-light">
+                            <tr class="border-b border-theme-text-dark/10 dark:border-theme-light/10 hover:bg-theme-text-dark/5 dark:hover:bg-theme-light/5 transition-colors">
+                                <td class="p-4 font-bold">Zona 1: Episentrum Utama</td>
+                                <td class="p-4">KEK Mandalika & Lombok Tengah</td>
+                                <td class="p-4 text-theme-yellow-dark font-bold">3x lipat standar</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/10 dark:border-theme-light/10 hover:bg-theme-text-dark/5 dark:hover:bg-theme-light/5 transition-colors">
+                                <td class="p-4 font-bold">Zona 2: Area Transit</td>
+                                <td class="p-4">Kota Mataram & Sekitarnya</td>
+                                <td class="p-4 text-theme-blue-light font-bold">2x lipat standar</td>
+                            </tr>
+                            <tr class="hover:bg-theme-text-dark/5 dark:hover:bg-theme-light/5 transition-colors">
+                                <td class="p-4 font-bold">Zona 3: Destinasi Satelit</td>
+                                <td class="p-4">Senggigi & Gili (Lombok Utara)</td>
+                                <td class="p-4 text-whatsapp font-bold">1x lipat standar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- EKSPLORASI 9 DESTINASI ZIGZAG -->
         <section class="py-12 bg-theme-light/50 dark:bg-[#070d1e] overflow-hidden">
             <div class="container mx-auto px-6 md:px-12 max-w-6xl">
                 <div class="text-center mb-16 reveal-up">
                     <h2 class="text-3xl md:text-5xl font-display uppercase tracking-tight text-theme-text-dark dark:text-theme-light">
-                        Mandalika <span class="text-theme-blue-light dark:text-theme-yellow-dark">Area</span>
+                        Eksplorasi <span class="text-theme-blue-light dark:text-theme-yellow-dark">Mengalir</span>
                     </h2>
+                    <p class="mt-4 text-theme-text-dark/70 dark:text-theme-light/70">9 Surga Terbaik di Jantung Mandalika</p>
                 </div>
 
                 <div class="space-y-20 md:space-y-32">
                     
-                    <!-- 1. KUTA MANDALIKA (Gambar Kiri, Teks Kanan) -->
+                    <!-- 1. KUTA MANDALIKA -->
                     <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
                         <div class="w-full md:w-1/2 reveal-left">
                             <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
@@ -259,7 +330,7 @@
                         </div>
                     </div>
 
-                    <!-- 2. BUKIT MERESE (Teks Kiri, Gambar Kanan) -->
+                    <!-- 2. BUKIT MERESE (Posisi Kanan) -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
                         <div class="w-full md:w-1/2 reveal-right">
                             <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
@@ -297,7 +368,7 @@
                         </div>
                     </div>
 
-                    <!-- 4. BUKIT DAN PANTAI SEGER -->
+                    <!-- 4. BUKIT DAN PANTAI SEGER (Posisi Kanan) -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
                         <div class="w-full md:w-1/2 reveal-right">
                             <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
@@ -306,7 +377,7 @@
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 reveal-left prose-custom">
-                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Pantai dan Bukit Seger</h3>
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">Bukit & Pantai Seger</h3>
                             <p class="text-theme-blue-light font-bold mb-2">Perpaduan Romansa Legenda dan Pesona Balap Modern</p>
                             <p class="text-sm md:text-base text-justify">Menawarkan kontras visual yang mencolok: luasnya Samudra Hindia berdampingan dengan lanskap ultra-modern Tikungan 10 Sirkuit Mandalika. Di sinilah jantung spiritual budaya Sasak berdetak, tempat legenda Putri Mandalika bernapas melalui monumen yang berdiri anggun di tepi pantai.</p>
                             <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
@@ -335,7 +406,7 @@
                         </div>
                     </div>
 
-                    <!-- 6. DESA ADAT SADE -->
+                    <!-- 6. DESA ADAT SADE (Posisi Kanan) -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
                         <div class="w-full md:w-1/2 reveal-right">
                             <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
@@ -363,7 +434,7 @@
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 reveal-right prose-custom">
-                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">TWA Gunung Tunak</h3>
+                            <h3 class="text-2xl md:text-4xl font-display mb-4 text-theme-text-dark dark:text-theme-light">TWA Gunung Tunak & Sari Goang</h3>
                             <p class="text-theme-blue-light font-bold mb-2">Harmoni Alam Liar yang Menakjubkan</p>
                             <p class="text-sm md:text-base text-justify">Kawasan konservasi seluas 1.200 hektar yang menyajikan pemandangan alam paling dramatis. Dijuluki "Raja Ampat-nya Lombok", tebing kapurnya menjulang vertikal. Mengejar <em>sunrise</em> sambil mendengarkan deburan ombak memukul pulau karang berlubang adalah terapi relaksasi tiada tara.</p>
                             <div class="flex items-center gap-2 text-sm text-theme-text-dark/70 dark:text-theme-light/70 border-t border-theme-text-dark/10 dark:border-theme-light/10 pt-4">
@@ -373,7 +444,7 @@
                         </div>
                     </div>
 
-                    <!-- 8. DESA WISATA MERTAK -->
+                    <!-- 8. DESA WISATA MERTAK (Posisi Kanan) -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
                         <div class="w-full md:w-1/2 reveal-right">
                             <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] relative">
@@ -415,6 +486,100 @@
             </div>
         </section>
 
+        <!-- TABEL LOGISTIK & NAVIGASI -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6 md:px-12 max-w-5xl reveal-up">
+                <h3 class="text-2xl md:text-3xl font-display text-center mb-8 text-theme-text-dark dark:text-theme-light">Peta Panduan Logistik & Retribusi</h3>
+                <div class="overflow-x-auto rounded-2xl shadow-xl border border-theme-text-dark/10 dark:border-theme-light/10 bg-theme-light dark:bg-[#070d1e]">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-theme-yellow-light text-theme-text-dark font-display uppercase tracking-wider text-xs">
+                            <tr>
+                                <th class="p-4">Destinasi</th>
+                                <th class="p-4">Estimasi Akses</th>
+                                <th class="p-4">Tiket Masuk</th>
+                                <th class="p-4">Biaya Parkir</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-theme-text-dark dark:text-theme-light">
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Kuta Mandalika</td><td class="p-4">16 Menit (4,3 km)</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Bukit Merese</td><td class="p-4">9 - 12 Menit</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Tanjung Aan</td><td class="p-4">7 Menit</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Bukit Seger</td><td class="p-4">5 Menit (Samping Sirkuit)</td><td class="p-4">Donasi Bebas</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Pantai Gerupuk</td><td class="p-4">20 Menit</td><td class="p-4">Gratis</td><td class="p-4">Retribusi Desa</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Desa Adat Sade</td><td class="p-4">15 Menit (10 km)</td><td class="p-4">Donasi Bebas</td><td class="p-4">Terpusat</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5">
+                                <td class="p-4 font-bold">Gunung Tunak</td><td class="p-4">Akses Konservasi</td><td class="p-4">Rp5.000 - Rp7.500</td><td class="p-4">Terintegrasi</td>
+                            </tr>
+                            <tr class="border-b border-theme-text-dark/5 dark:border-theme-light/5 bg-theme-text-dark/5 dark:bg-theme-light/5">
+                                <td class="p-4 font-bold">Desa Mertak</td><td class="p-4">15 Menit</td><td class="p-4">Via Paket Ekowisata</td><td class="p-4">Terintegrasi</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Pantai Batu Berang</td><td class="p-4">15 Menit (6,7 km)</td><td class="p-4">Gratis</td><td class="p-4">Rp5k / Rp10k</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORYNOMICS & PENUTUP -->
+        <section class="py-12">
+            <div class="container mx-auto px-6 md:px-12 max-w-4xl prose-custom reveal-blur text-justify">
+                <div class="bg-theme-yellow-light/10 dark:bg-theme-blue-dark/20 p-8 rounded-3xl border-l-4 border-theme-yellow-dark mb-10 shadow-md">
+                    <h3 class="text-2xl font-display text-theme-text-dark dark:text-theme-light mb-3">Storynomics Bau Nyale: Merawat Jiwa dalam Denyut Pembangunan</h3>
+                    <p class="text-theme-text-dark/80 dark:text-theme-light/80 italic">
+                        "Kawasan ini merupakan laboratorium hidup bagi konsep storynomics tourism, di mana legenda Putri Mandalika dikapitalisasi elegan untuk menciptakan identitas tanpa merusak sakralitasnya. Cacing laut warna-warni (Nyale) yang muncul setiap tanggal 20 bulan 10 Sasak dipercaya sebagai penjelmaan sang putri. Penyatuan narasi etos perdamaian masa lalu dan sirkuit balap yang memacu adrenalin ini menyuguhkan pengalaman berlibur yang puitis."
+                    </p>
+                </div>
+                
+                <h3 class="text-2xl font-display text-theme-text-dark dark:text-theme-light mb-4">Refleksi Penutup: Mandalika Sebagai Eskapisme Berkualitas</h3>
+                <p>
+                    Mandalika berhasil memadukan deru mesin berkecepatan tinggi dengan kemurahan hati alam yang mempesona. Mulai dari menunggangi ombak beringas, menyendiri di ekowisata mangrove, hingga mengagumi rumah bambu kuno; semuanya menyumbang nada dalam melodi liburan yang harmonis.
+                </p>
+                <p>
+                    Bagi setiap pencari kebebasan, Mandalika menawarkan pelarian liburan yang jauh dari kata kaku. Cukup bermodalkan setelan kacamata hitam, baju pantai yang nyaman, dan jiwa terbuka; sisanya biarkan semesta pesisir selatan Lombok yang merangkul Anda. Selamat merencanakan perjalanan asik ke kawasan super prioritas yang hangat dan menenangkan ini bersama <strong>Permata Lombok Transport</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- === CALL TO ACTION (PESAN SEKARANG) === -->
+        <section class="py-12 md:py-20 overflow-hidden">
+            <div class="container mx-auto px-6 md:px-12 max-w-5xl">
+                <div class="reveal-blur relative rounded-3xl overflow-hidden bg-theme-blue-light dark:bg-theme-blue-dark p-10 md:p-16 text-center shadow-2xl">
+                    <!-- Efek Pola Latar Titik-titik -->
+                    <div class="absolute inset-0 opacity-10 z-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=')]"></div>
+                    
+                    <div class="relative z-10 flex flex-col items-center">
+                        <h2 class="text-3xl md:text-5xl font-display uppercase tracking-tight mb-4 text-center drop-shadow-md text-theme-light">
+                            Siap Menjelajahi <span class="text-theme-yellow-light">Mandalika?</span>
+                        </h2>
+                        <p class="text-theme-light/90 mb-8 max-w-2xl text-sm md:text-base">
+                            Wujudkan liburan impian Anda tanpa ribet. Hubungi kami sekarang dan dapatkan penawaran spesial untuk perjalanan tak terlupakan di Lombok.
+                        </p>
+                        <!-- Tombol Pesan WhatsApp -->
+                        <a href="https://wa.me/6282341403159" target="_blank" rel="noreferrer" class="inline-flex items-center gap-3 bg-whatsapp text-theme-light px-8 py-4 rounded-full uppercase tracking-widest text-sm font-bold shadow-lg hover:bg-whatsapp-hover hover:-translate-y-1 transition-all group">
+                            Pesan Sekarang
+                            <i data-lucide="message-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <!-- === FOOTER === -->
     <footer class="pt-16 pb-8 bg-theme-dark relative z-30 overflow-hidden">
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
@@ -428,7 +593,7 @@
                         <span class="text-theme-blue-light dark:text-theme-blue-dark">LOMBOK</span>
                         <span class="text-theme-light">TRANSPORT</span>
                     </h2>
-                    <p class="text-theme-light text-xs sm:text-sm tracking-widest font-display mb-4 md:mb-0">
+                    <p class="text-theme-light text-xs sm:text-sm tracking-widest font-display">
                         Sahabat Traveling Lombok Anda
                     </p>
                 </div>
@@ -454,7 +619,6 @@
                 <p class="text-theme-light/70 text-xs sm:text-sm font-sans font-medium text-center md:text-left">
                     &copy; 2026 Permata Lombok Transport.
                 </p>
-                
                 <div class="flex items-center gap-6 text-theme-light/70">
                     <a href="https://facebook.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Facebook" class="hover:text-theme-blue-light transition-colors hover:-translate-y-1 transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.7 226.4 209.3 245V327.7h-63V256h63v-54.6c0-62.2 37-96.5 93.7-96.5 27.1 0 55.5 4.8 55.5 4.8v61h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h68.8l-11 71.7h-57.8V501C413.3 482.4 504 379.8 504 256z"/></svg>
