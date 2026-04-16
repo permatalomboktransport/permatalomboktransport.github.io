@@ -241,7 +241,7 @@
             
             <!-- Area Kiri: Logo Merek -->
             <div class="relative z-50 block reveal-zoom cursor-default">
-                <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
+                <img src="assets/images/favicon.png" 
                      alt="Logo Permata Lombok Transport" 
                      class="h-10 md:h-12 w-auto drop-shadow-md hover:scale-105 transition-transform"
                      onerror="this.style.display='none';">
@@ -332,23 +332,18 @@
                     <button data-target="tab-1" role="tab" aria-label="Antar Jemput" class="tab-btn flex-shrink-0 flex items-center justify-center p-4 rounded-full transition-all bg-theme-blue-light text-theme-light shadow-lg">
                         <i data-lucide="plane-landing" class="w-6 h-6"></i>
                     </button>
-                    
-                    <!-- Tombol Tab 2: Rental Mobil -->
-                    <button data-target="tab-2" role="tab" aria-label="Rental Mobil" class="tab-btn flex-shrink-0 flex items-center justify-center p-4 rounded-full transition-all bg-theme-text-dark/5 dark:bg-theme-light/5 text-theme-text-dark dark:text-theme-light hover:bg-theme-text-dark/10 dark:hover:bg-theme-light/10">
-                        <i data-lucide="car-front" class="w-6 h-6"></i>
-                    </button>
 
-                    <!-- Tombol Tab 3: Wisata Harian -->
+                    <!-- Tombol Tab 2: Wisata Harian -->
                     <button data-target="tab-3" role="tab" aria-label="Wisata Harian" class="tab-btn flex-shrink-0 flex items-center justify-center p-4 rounded-full transition-all bg-theme-text-dark/5 dark:bg-theme-light/5 text-theme-text-dark dark:text-theme-light hover:bg-theme-text-dark/10 dark:hover:bg-theme-light/10">
                         <i data-lucide="map" class="w-6 h-6"></i>
                     </button>
 
-                    <!-- Tombol Tab 4: Island Hopping -->
+                    <!-- Tombol Tab 3: Island Hopping -->
                     <button data-target="tab-4" role="tab" aria-label="Island Hopping" class="tab-btn flex-shrink-0 flex items-center justify-center p-4 rounded-full transition-all bg-theme-text-dark/5 dark:bg-theme-light/5 text-theme-text-dark dark:text-theme-light hover:bg-theme-text-dark/10 dark:hover:bg-theme-light/10">
                         <i data-lucide="ship" class="w-6 h-6"></i>
                     </button>
 
-                    <!-- Tombol Tab 5: Rombongan -->
+                    <!-- Tombol Tab 4: Rombongan -->
                     <button data-target="tab-5" role="tab" aria-label="Rombongan" class="tab-btn flex-shrink-0 flex items-center justify-center p-4 rounded-full transition-all bg-theme-text-dark/5 dark:bg-theme-light/5 text-theme-text-dark dark:text-theme-light hover:bg-theme-text-dark/10 dark:hover:bg-theme-light/10">
                         <i data-lucide="bus-front" class="w-6 h-6"></i>
                     </button>
@@ -409,56 +404,9 @@
                         </div>
                     </div>
 
-                    <!-- === WADAH PANEL 2: RENTAL MOBIL === -->
-                    <!-- Kelas 'hidden' membuatnya tersembunyi secara bawaan sampai tombol tab diklik -->
-                    <div id="tab-2" class="tab-panel hidden grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" role="tabpanel">
-                        
-                        <!-- Kartu Layanan 2.1 -->
-                        <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/avanza.jpg');">
-                            <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
-                            <div class="relative z-10">
-                                <i data-lucide="car" class="w-8 h-8 text-theme-yellow-light mb-4 drop-shadow-md"></i>
-                                <h3 class="text-xl md:text-2xl font-display text-white uppercase mb-8 drop-shadow-lg">Toyota Avanza</h3>
-                            </div>
-                            <div class="relative z-10 mt-auto">
-                                <a href="https://wa.me/6287859245125" target="_blank" rel="noreferrer" class="flex items-center justify-center w-full gap-2 bg-white text-theme-text-dark py-4 rounded-xl font-bold uppercase tracking-widest text-sm md:text-base hover:bg-gray-200 transition-colors shadow-lg">
-                                    Mulai Rp299K/Hari <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Kartu Layanan 2.2 -->
-                        <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/innova.jpg');">
-                            <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
-                            <div class="relative z-10">
-                                <i data-lucide="car-front" class="w-8 h-8 text-theme-yellow-light mb-4 drop-shadow-md"></i>
-                                <h3 class="text-xl md:text-2xl font-display text-white uppercase mb-8 drop-shadow-lg">Innova Reborn</h3>
-                            </div>
-                            <div class="relative z-10 mt-auto">
-                                <a href="https://wa.me/6287859245125" target="_blank" rel="noreferrer" class="flex items-center justify-center w-full gap-2 bg-white text-theme-text-dark py-4 rounded-xl font-bold uppercase tracking-widest text-sm md:text-base hover:bg-gray-200 transition-colors shadow-lg">
-                                    Mulai Rp499K/Hari <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Kartu Layanan 2.3 -->
-                        <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/armada.png');">
-                            <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
-                            <div class="relative z-10">
-                                <i data-lucide="bus" class="w-8 h-8 text-theme-yellow-light mb-4 drop-shadow-md"></i>
-                                <h3 class="text-xl md:text-2xl font-display text-white uppercase mb-8 drop-shadow-lg">Hiace Commuter</h3>
-                            </div>
-                            <div class="relative z-10 mt-auto">
-                                <a href="https://wa.me/6287859245125" target="_blank" rel="noreferrer" class="flex items-center justify-center w-full gap-2 bg-white text-theme-text-dark py-4 rounded-xl font-bold uppercase tracking-widest text-sm md:text-base hover:bg-gray-200 transition-colors shadow-lg">
-                                    Mulai Rp999K/Hari <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- === WADAH PANEL 3: WISATA HARIAN === -->
+                    <!-- === WADAH PANEL 2: WISATA HARIAN === -->
                     <div id="tab-3" class="tab-panel hidden grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" role="tabpanel">
-                        <!-- Kartu Layanan 3.1 -->
+                        <!-- Kartu Layanan 2.1 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/mandalika.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -471,7 +419,7 @@
                             </div>
                         </div>
                         
-                        <!-- Kartu Layanan 3.2 -->
+                        <!-- Kartu Layanan 2.2 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/pantai.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -484,7 +432,7 @@
                             </div>
                         </div>
                         
-                        <!-- Kartu Layanan 3.3 -->
+                        <!-- Kartu Layanan 2.3 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/terjun.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -498,9 +446,9 @@
                         </div>
                     </div>
 
-                    <!-- === WADAH PANEL 4: ISLAND HOPPING === -->
+                    <!-- === WADAH PANEL 3: ISLAND HOPPING === -->
                     <div id="tab-4" class="tab-panel hidden grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" role="tabpanel">
-                        <!-- Kartu Layanan 4.1 -->
+                        <!-- Kartu Layanan 3.1 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/utara.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -513,7 +461,7 @@
                             </div>
                         </div>
                         
-                        <!-- Kartu Layanan 4.2 -->
+                        <!-- Kartu Layanan 3.2 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/barat.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -526,7 +474,7 @@
                             </div>
                         </div>
                         
-                        <!-- Kartu Layanan 4.3 -->
+                        <!-- Kartu Layanan 3.3 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/timur.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -540,9 +488,9 @@
                         </div>
                     </div>
 
-                    <!-- === WADAH PANEL 5: PAKET ROMBONGAN === -->
+                    <!-- === WADAH PANEL 4: PAKET ROMBONGAN === -->
                     <div id="tab-5" class="tab-panel hidden grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" role="tabpanel">
-                        <!-- Kartu Layanan 5.1 -->
+                        <!-- Kartu Layanan 4.1 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/bus.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -556,7 +504,7 @@
                             </div>
                         </div>
                         
-                        <!-- Kartu Layanan 5.2 -->
+                        <!-- Kartu Layanan 4.2 -->
                         <div class="service-card group relative bg-cover bg-center border border-theme-text-dark/5 dark:border-theme-light/5 rounded-3xl p-8 flex flex-col justify-between shadow-xl overflow-hidden min-h-[300px]" style="background-image: url('https://permatalomboktransport.github.io/assets/images/bus.jpg');">
                             <div class="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/60"></div>
                             <div class="relative z-10">
@@ -570,7 +518,7 @@
                             </div>
                         </div>
                         
-                        <!-- Kartu Layanan 5.3 (Spesial: Layanan Plus) -->
+                        <!-- Kartu Layanan 4.3 (Spesial: Layanan Plus) -->
                         <div class="service-card bg-theme-yellow-light border border-theme-yellow-dark rounded-3xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden min-h-[300px]">
                             <!-- Pita penanda khusus (Ribbon) di pojok kanan atas -->
                             <div class="absolute top-0 right-0 bg-theme-blue-dark text-theme-light text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-widest z-20">Layanan Plus+</div>
