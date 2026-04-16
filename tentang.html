@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<!-- lang="id" memberi tahu Google bahwa bahasa utama website ini adalah Bahasa Indonesia. class="scroll-smooth" membuat efek gulir halaman menjadi lembut. -->
+<!-- Pengaturan bahasa (ID) dan efek scroll halus -->
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- =========================================================================
-         BAGIAN 1: PENGATURAN SEO & IDENTITAS WEBSITE
-         Bagian ini sangat penting agar website mudah ditemukan di Google dan 
-         tampil rapi saat link disebarkan ke WhatsApp, Facebook, dll.
-         ========================================================================= -->
-    
-    <!-- Judul halaman yang muncul di tab browser -->
+    <!-- === BAGIAN 1: SEO & IDENTITAS WEBSITE === -->
     <title>Tentang - Sahabat Traveling Lombok Anda</title>
-    
-    <!-- Deskripsi singkat yang muncul di bawah judul pada pencarian Google -->
-    <meta name="description" content="Kenali lebih dekat Permata Lombok Transport. Kami bukan sekadar penyedia layanan travel biasa, melainkan sahabat perjalanan premium Anda di Lombok yang menjamin kenyamanan dan keamanan liburan Anda.">
-    
-    <!-- Kata kunci pencarian (keywords) -->
-    <meta name="keywords" content="tentang permata lombok transport, travel lombok, sewa mobil lombok terpercaya, tour lombok, liburan lombok, transportasi premium lombok, profil travel lombok">
+    <meta name="description" content="Kenali lebih dekat Permata Lombok Transport. Kami bukan sekadar penyedia layanan travel biasa, melainkan sahabat perjalanan premium Anda di Lombok yang menjamin kenyamanan.">
+    <meta name="keywords" content="tentang permata lombok transport, travel lombok, sewa mobil lombok terpercaya, tour lombok, liburan lombok, transportasi premium lombok">
     <meta name="author" content="Permata Lombok Transport">
-    
-    <!-- Memberitahu robot Google untuk membaca dan mengikuti halaman ini -->
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="tentang">
 
-    <!-- Verifikasi Kepemilikan Google Search Console -->
+    <!-- Verifikasi Google Search Console -->
     <meta name="google-site-verification" content="83AS5_jZkny6En-OQhhZUcU_-G6zbOyG0CDFTT-cGGA" />
 
-    <!-- Google Analytics (GA4) - Untuk melacak jumlah pengunjung -->
-    <!-- CATATAN: Ganti 'G-KODEMILIKKAMU' dengan ID Analytics Anda nantinya -->
+    <!-- Google Analytics (GA4) -->
+    <!-- Ganti 'G-KODEMILIKKAMU' dengan ID asli Anda -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KODEMILIKKAMU"></script>
     <script>
@@ -40,25 +28,25 @@
     </script>
     -->
 
-    <!-- Ikon kecil di tab browser (Favicon) -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
 
-    <!-- Open Graph (Pengaturan tampilan kotak link saat dikirim via WhatsApp/Facebook) -->
+    <!-- Open Graph (Preview WhatsApp/Facebook) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="tentang">
     <meta property="og:title" content="Tentang Sahabat Traveling Lombok Anda">
-    <meta property="og:description" content="Kenali lebih dekat Permata Lombok Transport. Sahabat perjalanan premium Anda di Lombok yang menjamin kenyamanan liburan Anda.">
+    <meta property="og:description" content="Kenali lebih dekat Permata Lombok Transport. Sahabat perjalanan premium Anda di Lombok.">
     <meta property="og:image" content="assets/images/hero.png">
     <meta property="og:site_name" content="Permata Lombok Transport">
 
-    <!-- Twitter Card (Pengaturan tampilan link saat dibagikan di Twitter/X) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tentang Sahabat Traveling Lombok Anda">
     <meta name="twitter:description" content="Sahabat perjalanan Anda di Lombok yang menjamin kenyamanan liburan tanpa drama.">
     <meta name="twitter:image" content="assets/images/hero.png">
 
-    <!-- Schema.org JSON-LD (Kode rahasia khusus untuk mesin pencari agar tahu ini adalah bisnis Travel Agensi lokal) -->
+    <!-- Schema.org (Data terstruktur untuk mesin pencari) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -68,7 +56,7 @@
       "image": "assets/images/favicon.png",
       "description": "Layanan transportasi dan wisata premium di Lombok, Nusa Tenggara Barat.",
       "url": "https://permatalomboktransport.com",
-      "telephone": "+6287859245125",
+      "telephone": "+6282341403159",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Jl. Bypass Bandara Internasional Lombok",
@@ -81,28 +69,20 @@
     }
     </script>
     
-    <!-- =========================================================================
-         BAGIAN 2: ALAT BANTU (RESOURCES)
-         Memanggil sistem desain Tailwind CSS dan Ikon Lucide dari internet.
-         ========================================================================= -->
+    <!-- === BAGIAN 2: RESOURCE (Tailwind & Lucide) === -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- =========================================================================
-         BAGIAN 3: KONFIGURASI TEMA (TAILWIND CSS)
-         Pengaturan warna utama, font, dan animasi khusus merek Permata Lombok.
-         ========================================================================= -->
+    <!-- === BAGIAN 3: KONFIGURASI TAILWIND CSS === -->
     <script>
         tailwind.config = {
-            darkMode: 'class', // Mengaktifkan fitur mode gelap manual
+            darkMode: 'class', // Mode gelap manual
             theme: {
                 extend: {
-                    // Pengaturan Font
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
                         display: ['Poppins', 'sans-serif'],
                     },
-                    // Pengaturan Warna Khusus Merek
                     colors: {
                         'theme-light': '#ffffff',
                         'theme-dark': '#0a1128',
@@ -114,7 +94,6 @@
                         'whatsapp': '#25D366',
                         'whatsapp-hover': '#128C7E',
                     },
-                    // Pengaturan Durasi & Nama Animasi
                     animation: {
                         'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
                         'wave-slow': 'waveAnim 15s linear infinite',
@@ -123,7 +102,6 @@
                         'bounce-subtle': 'bounceSubtle 4s ease-in-out infinite',
                         'float-icon': 'floatIcon 3s ease-in-out infinite',
                     },
-                    // Kunci Pergerakan Animasi
                     keyframes: {
                         heartbeat: {
                             '0%, 100%': { transform: 'scale(1)' },
@@ -150,34 +128,30 @@
         }
     </script>
 
-    <!-- =========================================================================
-         BAGIAN 4: GAYA CSS MANUAL
-         Gaya untuk efek scroll dan kustomisasi scrollbar.
-         ========================================================================= -->
+    <!-- === BAGIAN 4: KUSTOMISASI CSS MANUAL === -->
     <style>
-        /* Mengambil font dari Google Fonts */
+        /* Impor Font Google */
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@800&display=swap');
 
-        /* Memperhalus tampilan teks dasar */
+        /* Rendering font agar lebih halus */
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             font-weight: 600;
         }
 
-        /* Mengatur semua judul menggunakan font Poppins */
         h1, h2, h3, h4, h5, h6, .font-display {
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
         }
 
-        /* --- PENGATURAN PRELOADER & HERO TEKS --- */
+        /* Preloader & Teks Hero */
         #preloader { z-index: 9999; transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
         #preloader-content { transition: opacity 0.8s ease-in-out; }
         #hero-text-content { opacity: 0; transform: translateY(50px); transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
         #hero-text-content.show { opacity: 1; transform: translateY(0); }
 
-        /* --- KELAS ANIMASI SAAT MENGGULIR (Scroll Reveal) --- */
+        /* Animasi Scroll Reveal */
         .reveal-up { opacity: 0; transform: translateY(50px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-up.is-visible { opacity: 1; transform: translateY(0); }
         
@@ -199,7 +173,7 @@
         .reveal-flip { opacity: 0; transform: perspective(400px) rotateX(15deg); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-flip.is-visible { opacity: 1; transform: perspective(400px) rotateX(0deg); }
 
-        /* --- MEMPERCANTIK SCROLLBAR SAMPING --- */
+        /* Kustomisasi Scrollbar */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #ffffff; }
         .dark ::-webkit-scrollbar-track { background: #0a1128; }
@@ -212,15 +186,10 @@
 
 <body class="bg-theme-light text-theme-text-dark dark:bg-theme-dark dark:text-theme-light transition-colors duration-300 overflow-x-hidden" id="body">
 
-    <!-- =========================================================================
-         LAYAR LOADING (PRELOADER)
-         Menutupi layar dengan logo berdetak sampai website siap ditampilkan.
-         ========================================================================= -->
+    <!-- === PRELOADER === -->
     <div id="preloader" class="fixed inset-0 z-[9999] bg-theme-light dark:bg-theme-dark flex flex-col items-center justify-center">
         <div id="preloader-content" class="relative flex items-center justify-center">
-            <!-- Efek cahaya di belakang logo -->
             <div class="absolute inset-0 bg-theme-blue-light/20 dark:bg-theme-blue-dark/30 blur-2xl rounded-full scale-[1.5]"></div>
-            <!-- Logo saat loading -->
             <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
                  alt="Logo Permata Lombok Transport" 
                  class="w-24 md:w-32 h-auto relative z-10 animate-heartbeat drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_15px_15px_rgba(37,99,235,0.2)]"
@@ -228,14 +197,11 @@
         </div>
     </div>
 
-    <!-- =========================================================================
-         HEADER (MENU NAVIGASI ATAS)
-         Bilah navigasi yang menempel di atas dan merespons saat digulir.
-         ========================================================================= -->
+    <!-- === HEADER / NAVIGASI === -->
     <header id="main-header" class="fixed w-full z-50 transition-all duration-300 top-0 px-0">
         <div id="header-inner" class="mx-auto px-6 py-6 transition-all duration-300 bg-transparent flex justify-between items-center">
             
-            <!-- Logo Merek Kiri -->
+            <!-- Logo Merek -->
             <div class="relative z-50 block reveal-zoom cursor-default">
                 <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" 
                      alt="Logo Permata Lombok Transport" 
@@ -243,15 +209,15 @@
                      onerror="this.style.display='none';">
             </div>
 
-            <!-- Tombol Aksi Kanan (Tema & Menu) -->
+            <!-- Tombol Aksi (Tema & Menu Mobile) -->
             <div class="flex items-center gap-4 md:gap-6 relative z-50 reveal-left">
-                <!-- Saklar Mode Gelap/Terang -->
+                <!-- Saklar Mode -->
                 <button id="theme-toggle" aria-label="Ganti Tema" class="p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors">
                     <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 md:w-7 md:h-7 hidden"></i>
                     <i data-lucide="moon" id="theme-toggle-dark-icon" class="w-6 h-6 md:w-7 md:h-7 hidden"></i>
                 </button>
 
-                <!-- Tombol Garis Tiga (Menu HP) -->
+                <!-- Tombol Menu Garis Tiga -->
                 <button id="mobile-menu-btn" aria-label="Buka Menu" class="p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors">
                     <svg id="icon-menu" class="w-8 h-8 md:w-9 md:h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                         <line x1="4" y1="9" x2="20" y2="9"></line>
@@ -261,44 +227,35 @@
             </div>
         </div>
 
-        <!-- Tampilan Menu Layar Penuh (Terbuka saat tombol menu diklik) -->
+        <!-- Dropdown Menu Layar Penuh -->
         <div id="mobile-dropdown" class="fixed inset-0 z-[60] bg-theme-light dark:bg-theme-dark transition-all duration-500 opacity-0 pointer-events-none flex flex-col items-center justify-center">
-            <!-- Tombol Tutup X -->
             <button id="close-mobile-menu" aria-label="Tutup Menu" class="absolute top-6 right-6 md:top-8 md:right-12 p-2 focus:outline-none text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-yellow-dark transition-colors flex items-center justify-center">
                 <i data-lucide="x" class="w-10 h-10 md:w-12 md:h-12 hover:rotate-90 transition-transform duration-300"></i>
             </button>
 
-            <!-- Daftar Tautan Navigasi -->
             <nav class="flex flex-col space-y-8 text-center" id="mobile-menu-content">
-                <a href="/" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Beranda</a>
-                <a href="tentang" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Tentang</a>
-                <a href="layanan" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Layanan</a>
-                <a href="destinasi" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light dark:hover:text-theme-blue-dark transition-colors font-display tracking-tight">Destinasi</a>
+                <a href="/" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light transition-colors font-display tracking-tight">Beranda</a>
+                <a href="tentang" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light transition-colors font-display tracking-tight">Tentang</a>
+                <a href="layanan" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light transition-colors font-display tracking-tight">Layanan</a>
+                <a href="destinasi" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase text-theme-text-dark dark:text-theme-light hover:text-theme-blue-light transition-colors font-display tracking-tight">Destinasi</a>
             </nav>
         </div>
     </header>
 
-    <!-- =========================================================================
-         HERO SECTION (TAMPILAN ATAS HALAMAN TENTANG KAMI)
-         Menggunakan tinggi 70vh agar lebih pendek dari beranda utama.
-         ========================================================================= -->
+    <!-- === HERO SECTION === -->
     <section id="hero" class="relative h-[70vh] w-full flex items-center overflow-hidden bg-theme-dark">
-        
-        <!-- Latar Belakang Gambar (Bergerak perlahan membesar) -->
+        <!-- Latar Belakang -->
         <div class="absolute inset-0 z-0">
             <div id="hero-bg-img" class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-[3s] ease-out scale-105" style="background-image: url('https://permatalomboktransport.github.io/assets/images/hero.png');"></div>
         </div>
         
-        <!-- Lapisan Warna Transisi Bawah ke Atas (Gradient Overlay) -->
+        <!-- Gradient Overlay -->
         <div class="absolute inset-0 z-10 bg-gradient-to-t from-theme-light dark:from-theme-dark to-transparent transition-colors duration-300"></div>
 
-        <!-- Teks Judul Berada di Tengah Bawah -->
+        <!-- Teks Utama -->
         <div class="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col justify-end pb-16">
             <div id="hero-text-content" class="flex flex-col items-center text-center w-full">
-                <!-- Tulisan "Tentang Kami" Kecil -->
                 <span class="text-theme-yellow-light dark:text-theme-yellow-dark text-sm sm:text-base md:text-xl tracking-widest uppercase mb-4 font-display">Tentang Kami</span>
-                
-                <!-- Judul Utama Halaman -->
                 <h1 class="text-[9vw] sm:text-5xl md:text-6xl lg:text-7xl text-theme-text-dark dark:text-theme-light flex flex-col leading-[1.1] tracking-tight">
                     <span class="whitespace-nowrap drop-shadow-md">AGENSI TRAVELING</span>
                     <span class="text-theme-blue-light dark:text-theme-blue-dark drop-shadow-md whitespace-nowrap">DI LOMBOK</span>
@@ -307,19 +264,13 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         KONTEN UTAMA
-         Berisi cerita perusahaan, statistik angka, dan fitur unggulan tim.
-         ========================================================================= -->
+    <!-- === KONTEN UTAMA === -->
     <main class="relative z-30 pb-20 bg-theme-light dark:bg-theme-dark transition-colors duration-300">
         
-        <!-- -----------------------------------------------------------------
-             SEGMEN 1: CERITA & KOMITMEN (Latar Belakang)
-             ----------------------------------------------------------------- -->
+        <!-- SEGMEN 1: CERITA & KOMITMEN -->
         <section class="py-16 md:py-24">
             <div class="container mx-auto px-6 md:px-12 max-w-5xl">
                 <div class="text-center reveal-up">
-                    <!-- Ikon Tanda Kutip (Quote) -->
                     <i data-lucide="quote" class="w-12 h-12 md:w-16 md:h-16 text-theme-blue-light dark:text-theme-yellow-dark mx-auto mb-6 opacity-50"></i>
                     
                     <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-theme-text-dark dark:text-theme-light font-display leading-tight mb-8">
@@ -333,27 +284,24 @@
             </div>
         </section>
 
-        <!-- -----------------------------------------------------------------
-             SEGMEN 2: STATISTIK & PENCAPAIAN ANGKA
-             ----------------------------------------------------------------- -->
+        <!-- SEGMEN 2: STATISTIK & PENCAPAIAN -->
         <section class="py-12 overflow-hidden">
             <div class="container mx-auto px-6 md:px-12 max-w-7xl">
-                <!-- Grid membagi layar menjadi 3 kolom saat di layar besar -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     
-                    <!-- Kotak Kiri: Jumlah Tamu -->
+                    <!-- Kotak 1: Tamu -->
                     <div class="reveal-left bg-theme-blue-light dark:bg-theme-blue-dark rounded-3xl p-8 text-theme-light flex flex-col items-center justify-center text-center shadow-xl hover:-translate-y-2 transition-transform duration-300">
                         <i data-lucide="smile" class="w-12 h-12 mb-4 animate-float-icon"></i>
                         <h3 class="text-4xl md:text-5xl font-display mb-2">1000+</h3>
                         <p class="text-sm md:text-base uppercase tracking-widest opacity-90">Senyuman Tamu</p>
                     </div>
 
-                    <!-- Kotak Tengah: Foto/Logo Perusahaan -->
+                    <!-- Kotak 2: Logo -->
                     <div class="reveal-zoom rounded-3xl overflow-hidden shadow-xl aspect-square md:aspect-auto hover:scale-[1.02] transition-transform duration-300 bg-theme-light border border-theme-text-dark/5 dark:border-theme-light/5">
                         <img src="https://permatalomboktransport.github.io/assets/images/logo.jpeg" alt="Logo Permata Lombok Representatif" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
                     </div>
 
-                    <!-- Kotak Kanan: Tingkat Keamanan -->
+                    <!-- Kotak 3: Keamanan -->
                     <div class="reveal-right bg-theme-yellow-light dark:bg-theme-yellow-dark rounded-3xl p-8 text-theme-text-dark flex flex-col items-center justify-center text-center shadow-xl hover:-translate-y-2 transition-transform duration-300">
                         <i data-lucide="map-pin" class="w-12 h-12 mb-4 animate-float-icon"></i>
                         <h3 class="text-4xl md:text-5xl font-display mb-2">100%</h3>
@@ -364,14 +312,10 @@
             </div>
         </section>
 
-        <!-- -----------------------------------------------------------------
-             SEGMEN 3: SERVIS & KEUNGGULAN EKSTRA KAMI
-             Ditampilkan dengan gaya berselang-seling (kiri-kanan).
-             ----------------------------------------------------------------- -->
+        <!-- SEGMEN 3: KEUNGGULAN KAMI -->
         <section class="py-24 md:py-32">
             <div class="container mx-auto px-6 md:px-12 max-w-7xl">
                 
-                <!-- Judul Segmen Servis -->
                 <div class="reveal-up text-center mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl text-theme-text-dark dark:text-theme-light font-display uppercase tracking-tight">
                         Servis yang <span class="text-theme-blue-light dark:text-theme-blue-dark">Ditawarkan</span>
@@ -380,13 +324,11 @@
 
                 <div class="space-y-12">
                     
-                    <!-- Kotak Keunggulan 1: Fotografi -->
+                    <!-- Fitur 1 -->
                     <div class="reveal-left flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-theme-light dark:bg-[#070d1e] p-8 md:p-12 rounded-3xl shadow-lg border border-theme-text-dark/5 dark:border-theme-light/5">
-                        <!-- Area Ikon -->
                         <div class="bg-theme-yellow-light/20 p-6 rounded-full shrink-0 text-theme-yellow-dark">
                             <i data-lucide="camera" class="w-10 h-10 md:w-14 md:h-14"></i>
                         </div>
-                        <!-- Area Teks -->
                         <div>
                             <h3 class="text-xl md:text-2xl font-display text-theme-text-dark dark:text-theme-light uppercase mb-3">Driver Fotografer Asik</h3>
                             <p class="text-theme-text-dark/80 dark:text-theme-light/80 text-justify leading-relaxed text-sm md:text-base">
@@ -395,7 +337,7 @@
                         </div>
                     </div>
 
-                    <!-- Kotak Keunggulan 2: Rekomendasi Kuliner (Posisi Dibalik/Reverse di Layar Besar) -->
+                    <!-- Fitur 2 (Posisi Dibalik) -->
                     <div class="reveal-right flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10 bg-theme-light dark:bg-[#070d1e] p-8 md:p-12 rounded-3xl shadow-lg border border-theme-text-dark/5 dark:border-theme-light/5">
                         <div class="bg-theme-blue-light/20 p-6 rounded-full shrink-0 text-theme-blue-light dark:text-theme-blue-dark">
                             <i data-lucide="utensils" class="w-10 h-10 md:w-14 md:h-14"></i>
@@ -408,7 +350,7 @@
                         </div>
                     </div>
 
-                    <!-- Kotak Keunggulan 3: Kenyamanan AC/Kendaraan -->
+                    <!-- Fitur 3 -->
                     <div class="reveal-up flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-theme-light dark:bg-[#070d1e] p-8 md:p-12 rounded-3xl shadow-lg border border-theme-text-dark/5 dark:border-theme-light/5">
                         <div class="bg-whatsapp/20 p-6 rounded-full shrink-0 text-whatsapp">
                             <i data-lucide="snowflake" class="w-10 h-10 md:w-14 md:h-14"></i>
@@ -425,24 +367,19 @@
             </div>
         </section>
 
-        <!-- -----------------------------------------------------------------
-             SEGMEN 4: AJAKAN BERTINDAK (Call to Action)
-             Kotak besar yang mengajak pengunjung menuju halaman Harga/Layanan.
-             ----------------------------------------------------------------- -->
+        <!-- SEGMEN 4: AJAKAN BERTINDAK (Call to Action) -->
         <section class="py-20 overflow-hidden">
             <div class="container mx-auto px-6 md:px-12 max-w-5xl">
                 <div class="reveal-blur relative rounded-3xl overflow-hidden bg-theme-blue-light dark:bg-theme-blue-dark p-10 md:p-16 text-center shadow-2xl">
-                    <!-- Efek Hiasan Pola Bintik (Dot Pattern) di Latar Belakang -->
+                    <!-- Efek Pola Latar -->
                     <div class="absolute inset-0 opacity-10 z-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=')]"></div>
                     
                     <div class="relative z-10 flex flex-col items-center">
                         <h2 class="text-3xl md:text-5xl font-display uppercase tracking-tight mb-8 text-center drop-shadow-md">
                             <span class="text-theme-text-dark">Siap Liburan?</span> <span class="text-theme-light">Cek Harga</span>
                         </h2>
-                        <!-- Tombol Cek Layanan -->
                         <a href="layanan" class="inline-flex items-center gap-3 bg-theme-yellow-light text-theme-text-dark px-8 py-4 rounded-full uppercase tracking-widest text-sm font-bold shadow-lg hover:bg-theme-light hover:-translate-y-1 transition-all group">
                             Layanan Kami
-                            <!-- Ikon Panah yang Bergeser saat Disorot Mouse -->
                             <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -452,17 +389,14 @@
 
     </main>
 
-    <!-- =========================================================================
-         FOOTER (CATATAN KAKI HALAMAN)
-         Menampilkan logo di bawah, informasi lokasi, copyright, dan link Sosial Media.
-         ========================================================================= -->
+    <!-- === FOOTER === -->
     <footer class="pt-16 pb-8 bg-theme-dark relative z-30 overflow-hidden">
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-12 mb-12">
                 
-                <!-- Identitas Merek di Bawah -->
+                <!-- Info Merek -->
                 <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left reveal-up">
-                    <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" alt="Logo Permata Lombok Transport" class="w-12 h-12 md:w-14 md:h-14 mb-4 drop-shadow-md">
+                    <img src="https://permatalomboktransport.github.io/assets/images/favicon.png" alt="Logo Footer" class="w-12 h-12 md:w-14 md:h-14 mb-4 drop-shadow-md">
                     <h2 class="text-base sm:text-lg md:text-xl font-display tracking-tight leading-tight mb-2">
                         <span class="text-theme-yellow-light dark:text-theme-yellow-dark">PERMATA</span>
                         <span class="text-theme-blue-light dark:text-theme-blue-dark">LOMBOK</span>
@@ -473,17 +407,12 @@
                     </p>
                 </div>
                 
-                <!-- Informasi Lokasi Perusahaan (Disinkronkan dengan halaman index) -->
+                <!-- Info Lokasi -->
                 <div class="w-full md:w-1/2 reveal-up flex flex-col items-center md:items-start text-center md:text-left" style="transition-delay: 200ms;">
-                    <!-- Tautan ini akan langsung membuka Google Maps ketika diklik -->
                     <a href="https://maps.app.goo.gl/ZNTKW7zprXFkHNt89" target="_blank" rel="noreferrer" class="group flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 rounded-xl hover:bg-theme-light/5 transition-colors duration-300">
-                        
-                        <!-- Ikon Lokasi Peta (Map Pin) -->
                         <div class="bg-theme-blue-light/20 p-3 rounded-full text-theme-yellow-light group-hover:scale-110 group-hover:bg-theme-blue-light/40 transition-all shrink-0">
                             <i data-lucide="map-pin" class="w-6 h-6 sm:w-8 sm:h-8"></i>
                         </div>
-                        
-                        <!-- Teks Alamat -->
                         <div>
                             <h3 class="text-theme-yellow-light font-display uppercase tracking-wider text-sm mb-2 group-hover:text-theme-light transition-colors">ALAMAT KANTOR</h3>
                             <p class="text-theme-light/80 leading-relaxed text-sm md:text-base group-hover:text-theme-light transition-colors">
@@ -494,85 +423,59 @@
                 </div>
             </div>
 
-            <!-- Hak Cipta & Ikon Sosial Media -->
+            <!-- Hak Cipta & Sosial Media -->
             <div class="border-t border-theme-light/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 reveal-blur" style="transition-delay: 300ms;">
                 <p class="text-theme-light/70 text-xs sm:text-sm font-sans font-medium text-center md:text-left">
                     &copy; 2026 Permata Lombok Transport.
                 </p>
                 
-                <!-- Ikon Sosial Media (Menggunakan format SVG langsung agar cepat dimuat) -->
                 <div class="flex items-center gap-6 text-theme-light/70">
                     <a href="https://facebook.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Facebook" class="hover:text-theme-blue-light transition-colors hover:-translate-y-1 transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
-                            <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.7 226.4 209.3 245V327.7h-63V256h63v-54.6c0-62.2 37-96.5 93.7-96.5 27.1 0 55.5 4.8 55.5 4.8v61h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h68.8l-11 71.7h-57.8V501C413.3 482.4 504 379.8 504 256z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.7 226.4 209.3 245V327.7h-63V256h63v-54.6c0-62.2 37-96.5 93.7-96.5 27.1 0 55.5 4.8 55.5 4.8v61h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h68.8l-11 71.7h-57.8V501C413.3 482.4 504 379.8 504 256z"/></svg>
                     </a>
                     <a href="https://instagram.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="Instagram" class="hover:text-pink-500 transition-colors hover:-translate-y-1 transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
-                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                     </a>
                     <a href="https://tiktok.com/permatalomboktransport" target="_blank" rel="noreferrer" aria-label="TikTok" class="hover:text-theme-light transition-colors hover:-translate-y-1 transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 sm:w-5 sm:h-5 fill-current">
-                            <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
                     </a>
                     <a href="https://youtube.com/@permatalomboktransport" target="_blank" rel="noreferrer" aria-label="YouTube" class="hover:text-red-500 transition-colors hover:-translate-y-1 transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current">
-                            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-5 h-5 sm:w-6 sm:h-6 fill-current"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
                     </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- =========================================================================
-         TOMBOL WHATSAPP MENGAMBANG (FLOATING ACTION BUTTON)
-         Tombol hijau yang selalu ada di pojok kanan bawah agar tamu mudah chat.
-         ========================================================================= -->
-    <a href="https://wa.me/6287859245125" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-whatsapp hover:bg-whatsapp-hover text-theme-light p-3 md:p-4 rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.4)] transition-colors duration-300 animate-bounce-subtle flex items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-7 h-7 md:w-9 md:h-9 fill-current">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-        </svg>
+    <!-- === TOMBOL WHATSAPP MENGAMBANG === -->
+    <a href="https://wa.me/6282341403159" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-whatsapp hover:bg-whatsapp-hover text-theme-light p-3 md:p-4 rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.4)] transition-colors duration-300 animate-bounce-subtle flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-7 h-7 md:w-9 md:h-9 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
-    <!-- =========================================================================
-         SISTEM PROGRAM (JAVASCRIPT)
-         Kumpulan otak di balik layar yang mengatur klik tombol, animasi gulir, 
-         dan layar loading agar berjalan lancar.
-         ========================================================================= -->
+    <!-- === SISTEM JAVASCRIPT === -->
     <script>
-        // Perintah ini memastikan semua program di bawah jalan HANYA JIKA halaman web sudah dimuat
         document.addEventListener('DOMContentLoaded', () => {
             
-            // --- 1. MENGHIDUPKAN IKON ---
-            // Fungsi untuk menampilkan semua ikon yang dipanggil (seperti ikon mobil, pesawat, dll)
-            const inisialisasiIkon = () => {
-                lucide.createIcons();
-            };
+            // 1. Render Ikon Lucide
+            const initIcons = () => lucide.createIcons();
 
-            // --- 2. PENGATURAN TOMBOL GELAP / TERANG (Dark Mode) ---
-            const aturModeTema = () => {
-                const themeToggleBtn = document.getElementById('theme-toggle');
+            // 2. Mode Gelap/Terang
+            const initTheme = () => {
+                const btn = document.getElementById('theme-toggle');
                 const darkIcon = document.getElementById('theme-toggle-dark-icon');
                 const lightIcon = document.getElementById('theme-toggle-light-icon');
                 
-                // Mengecek apakah HP pengunjung memang di-setting dark mode atau belum
                 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark');
-                    lightIcon.classList.remove('hidden'); // Menampilkan ikon matahari
+                    lightIcon.classList.remove('hidden');
                 } else {
                     document.documentElement.classList.remove('dark');
-                    darkIcon.classList.remove('hidden'); // Menampilkan ikon bulan
+                    darkIcon.classList.remove('hidden');
                 }
 
-                // Apa yang terjadi jika tombol matahari/bulan diklik?
-                themeToggleBtn.addEventListener('click', () => {
+                btn.addEventListener('click', () => {
                     darkIcon.classList.toggle('hidden');
                     lightIcon.classList.toggle('hidden');
-
-                    // Jika saat ini gelap, ubah jadi terang. Begitu sebaliknya.
                     if (document.documentElement.classList.contains('dark')) {
                         document.documentElement.classList.remove('dark');
                         localStorage.setItem('color-theme', 'light');
@@ -583,125 +486,98 @@
                 });
             };
 
-            // --- 3. MENGATUR LAYAR LOADING (Preloader) ---
-            const kelolaPreloader = () => {
-                const heroImageUrl = 'https://permatalomboktransport.github.io/assets/images/hero.png';
-                
-                // Sistem akan menunggu 2 hal selesai secara bersamaan:
-                // 1. Menunggu gambar utama ('hero.png') selesai diunduh oleh internet pengunjung
-                const imageLoadPromise = new Promise((resolve) => {
+            // 3. Efek Preloader & Hero Teks
+            const initPreloader = () => {
+                const heroImage = new Promise(resolve => {
                     const img = new Image();
-                    img.src = heroImageUrl;
-                    img.onload = resolve;  // Jika gambar berhasil dimuat
-                    img.onerror = resolve; // Jika gambar gagal dimuat (tetap lanjut saja)
+                    img.src = 'https://permatalomboktransport.github.io/assets/images/hero.png';
+                    img.onload = resolve;
+                    img.onerror = resolve;
                 });
                 
-                // 2. Menunggu waktu minimal 2,5 detik agar animasi detak jantung terlihat bagus
-                const minTimePromise = new Promise((resolve) => setTimeout(resolve, 2500));
+                const minTime = new Promise(resolve => setTimeout(resolve, 2500));
 
-                // Saat kedua syarat di atas terpenuhi...
-                Promise.all([imageLoadPromise, minTimePromise]).then(() => {
+                Promise.all([heroImage, minTime]).then(() => {
                     const preloaderContent = document.getElementById('preloader-content');
-                    // Pertama, pudarkan logo di layar loading
                     if (preloaderContent) preloaderContent.style.opacity = '0'; 
                     
                     setTimeout(() => {
                         const preloader = document.getElementById('preloader');
-                        // Kedua, geser layar menutupi ke sebelah kiri
                         if (preloader) preloader.style.transform = 'translateX(-100%)'; 
                         
                         setTimeout(() => {
-                            // Ketiga, hilangkan layar loading seutuhnya
                             if (preloader) preloader.style.display = 'none'; 
                             document.getElementById('body').classList.remove('overflow-hidden'); 
                             
-                            // Tampilkan tulisan di area Hero dengan animasi muncul
                             const heroText = document.getElementById('hero-text-content');
                             if (heroText) heroText.classList.add('show'); 
                             
-                            // Terakhir, aktifkan efek elemen bermunculan saat menggulir ke bawah
-                            inisialisasiScrollReveal(); 
+                            initScrollReveal(); 
                         }, 1800);
                     }, 1100);
                 });
             };
 
-            // --- 4. EFEK MENU ATAS MENGHILANG & MUNCUL SAAT DIGULIR ---
-            const efekHeaderScroll = () => {
+            // 4. Efek Blur Header saat Scroll
+            const initHeaderScroll = () => {
                 const headerInner = document.getElementById('header-inner');
                 window.addEventListener('scroll', () => {
-                    // Jika halaman digulir lebih dari 50 piksel ke bawah...
                     if (window.scrollY > 50) {
-                        // Buat menu atas jadi berwarna solid dan sedikit transparan (blur)
                         headerInner.classList.remove('bg-transparent', 'py-6');
                         headerInner.classList.add('bg-theme-light/90', 'dark:bg-theme-dark/90', 'backdrop-blur-md', 'py-4', 'shadow-md');
                     } else {
-                        // Jika kembali ke paling atas, buat menu transparan lagi
                         headerInner.classList.add('bg-transparent', 'py-6');
                         headerInner.classList.remove('bg-theme-light/90', 'dark:bg-theme-dark/90', 'backdrop-blur-md', 'py-4', 'shadow-md');
                     }
                 });
             };
 
-            // --- 5. MENGATUR TOMBOL MENU UNTUK TAMPILAN HP ---
-            const kelolaMenuMobile = () => {
+            // 5. Menu Navigasi Mobile (Layar Penuh)
+            const initMobileMenu = () => {
                 const dropdown = document.getElementById('mobile-dropdown');
-                const btnBuka = document.getElementById('mobile-menu-btn'); // Tombol garis tiga
-                const btnTutup = document.getElementById('close-mobile-menu'); // Tombol X
-                let menuTerbuka = false;
+                const btnOpen = document.getElementById('mobile-menu-btn');
+                const btnClose = document.getElementById('close-mobile-menu');
+                let isOpen = false;
 
-                // Fungsi untuk membuka / menutup menu penuh layar
-                const alihkanMenu = () => {
-                    menuTerbuka = !menuTerbuka;
-                    if (menuTerbuka) {
+                const toggleMenu = () => {
+                    isOpen = !isOpen;
+                    if (isOpen) {
                         dropdown.classList.remove('opacity-0', 'pointer-events-none');
                         dropdown.classList.add('opacity-100');
-                        document.body.style.overflow = 'hidden'; // Mengunci layar utama agar tidak bisa digulir
+                        document.body.style.overflow = 'hidden'; 
                     } else {
                         dropdown.classList.remove('opacity-100');
                         dropdown.classList.add('opacity-0', 'pointer-events-none');
-                        document.body.style.overflow = ''; // Membuka kunci layar
+                        document.body.style.overflow = ''; 
                     }
                 };
 
-                // Memasang fungsi alihkanMenu ke tombol klik
-                btnBuka.addEventListener('click', alihkanMenu);
-                if (btnTutup) btnTutup.addEventListener('click', alihkanMenu);
+                btnOpen.addEventListener('click', toggleMenu);
+                if (btnClose) btnClose.addEventListener('click', toggleMenu);
             };
 
-            // --- 6. EFEK ANIMASI MUNCUL SAAT MENGGULIR (Scroll Reveal) ---
-            const inisialisasiScrollReveal = () => {
-                // Pengaturan: Animasi akan dipicu saat elemen terlihat minimal 10% (0.1) di layar
-                const pengaturanPengamat = {
-                    root: null,
-                    rootMargin: '0px 0px -50px 0px', 
-                    threshold: 0.1 
-                };
-
-                // Membuat 'Pengamat' (Observer) menggunakan fitur bawaan browser
-                const pengamat = new IntersectionObserver((entries, observer) => {
+            // 6. Animasi Tampil Saat Scroll (Scroll Reveal)
+            const initScrollReveal = () => {
+                const observerOptions = { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.1 };
+                const observer = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
-                        // Jika elemen sudah masuk ke dalam layar pengguna...
                         if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible'); // Tambahkan kelas ini agar animasinya jalan
-                            observer.unobserve(entry.target); // Berhenti mengamati elemen ini karena sudah muncul
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); 
                         }
                     });
-                }, pengaturanPengamat);
+                }, observerOptions);
 
-                // Mencari semua elemen yang punya kelas dengan kata 'reveal' lalu menyuruh si pengamat untuk memantaunya
-                const elemenDiperhatikan = document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-blur, .reveal-flip');
-                elemenDiperhatikan.forEach(el => pengamat.observe(el)); 
+                const targets = document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-blur, .reveal-flip');
+                targets.forEach(el => observer.observe(el)); 
             };
 
-            // --- JALANKAN SEMUA FUNGSI ---
-            inisialisasiIkon();
-            aturModeTema();
-            kelolaPreloader();
-            efekHeaderScroll();
-            kelolaMenuMobile();
-            // Catatan: inisialisasiScrollReveal() dipanggil di dalam kelolaPreloader() 
-            // agar animasi tidak berjalan duluan sebelum layar loading selesai.
+            // Jalankan seluruh inisialisasi
+            initIcons();
+            initTheme();
+            initPreloader();
+            initHeaderScroll();
+            initMobileMenu();
         });
     </script>
 </body>
